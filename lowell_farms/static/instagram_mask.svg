@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105" height="103" viewBox="0 0 105 103">
+  <defs>
+    <clipPath id="polygon-clip-triangle-equilateral" clipPathUnits="objectBoundingBox">
+      <polygon id="instagram_mask-a" points="48.983 0 14.624 13.443 0 46.848 13.694 80.628 47.654 95.02 82.005 81.566 96.618 48.176 82.95 14.392"/>
+    </clipPath>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(3.89 4.186)">
+    <use stroke="#BAB1A4" stroke-width="7" xlink:href="#instagram_mask-a"/>
+  </g>
+</svg>
