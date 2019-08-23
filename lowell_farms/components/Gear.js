@@ -30,7 +30,7 @@ class GearPage extends Component {
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />
           )}
-          <link href="https://www.lowellherb.co/gear" rel="canonical" />
+          <link href="https://www.lowellfarms.com/gear" rel="canonical" />
         </Head>
         <HeaderStyles
           style={{

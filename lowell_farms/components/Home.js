@@ -66,7 +66,7 @@ class Home extends Component {
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />
           )}
-          <link href="https://www.lowellherb.co/" rel="canonical" />
+          <link href="https://www.lowellfarms.com/" rel="canonical" />
         </Head>
         <HeaderStyles
           className="home-header"

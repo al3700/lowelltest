@@ -45,7 +45,7 @@ class Cannabis extends Component {
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />
           )}
-          <link href="https://www.lowellherb.co/cannabis" rel="canonical" />
+          <link href="https://www.lowellfarms.com/cannabis" rel="canonical" />
         </Head>
         <HeaderStyles
           style={{

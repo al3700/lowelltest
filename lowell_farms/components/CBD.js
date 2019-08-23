@@ -45,7 +45,7 @@ class CBD extends Component {
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />
           )}
-          <link href="https://www.lowellherb.co/cbd" rel="canonical" />
+          <link href="https://www.lowellfarms.com/cbd" rel="canonical" />
         </Head>
         <HeaderStyles
           style={{

@@ -66,7 +66,7 @@ class Stockists extends Component {
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />
           )}
-          <link href="https://www.lowellherb.co/stockists" rel="canonical" />
+          <link href="https://www.lowellfarms.com/stockists" rel="canonical" />
         </Head>
         <Query query={ZIP_CODE_QUERY}>
           {({ data: { zipCode } }) => {

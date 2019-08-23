@@ -168,7 +168,7 @@ class About extends Component {
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />
           )}
-          <link href="https://www.lowellherb.co/about" rel="canonical" />
+          <link href="https://www.lowellfarms.com/about" rel="canonical" />
         </Head>
         {/* ----------------------------------------------
           Contact
