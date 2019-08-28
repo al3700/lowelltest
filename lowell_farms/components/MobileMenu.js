@@ -83,7 +83,7 @@ class MobileMenu extends Component {
                   </Link>
 
                   <div className="mobile-nav-links">
-                    <Link href="https://www.lowellcafe.com/">
+                    <Link href="/cafe">
                       <a onClick={toggleMobileMenu}>
                         {sitewideData.data.cafe_link_text != '' &&
                           sitewideData.data.cafe_link_text[0].text}

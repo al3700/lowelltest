@@ -115,6 +115,8 @@ export const HomeWrapper = styled.main`
     }
   }
 
+
+
   .cafe {
     background-color: #F1F1F1;
     padding: 80px 0 100px;

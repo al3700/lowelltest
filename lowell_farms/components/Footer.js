@@ -108,7 +108,7 @@ class Footer extends Component {
             <div className="cols-2">
               <div className="cols-2 col-left">
                 <div>
-                  <Link href="https://www.lowellcafe.com/">
+                  <Link href="/cafe">
                     <a>
                       {sitewideData.data.cafe_link_text != '' &&
                           sitewideData.data.cafe_link_text[0].text}
