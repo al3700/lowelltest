@@ -101,6 +101,8 @@ class Page extends Component {
   render() {
     const { sitewideData, router, client, products } = this.props;
 
+    console.log('test deploy');
+
     return (
       <ThemeProvider theme={theme}>
         <StyledPage className={this.state.showAgeCheck ? 'locked' : ''}>
