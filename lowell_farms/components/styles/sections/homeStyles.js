@@ -23,7 +23,7 @@ export const HomeWrapper = styled.main`
   }
   h3.small-caps {
     margin-top: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
   .home-section-title {
     font-family: 'Lora Regular', serif;
@@ -31,7 +31,7 @@ export const HomeWrapper = styled.main`
     color: #6b6653;
     margin: 0;
     line-height: 1.1;
-    max-width: 400px;
+    max-width: 420px;
     @media only screen and (max-width: 768px) {
       font-size: 37px;
     }
@@ -46,7 +46,7 @@ export const HomeWrapper = styled.main`
     }
   }
   .cannabis {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 10px;
     img {
       @media screen and (max-width: 768px) {
@@ -57,6 +57,9 @@ export const HomeWrapper = styled.main`
         margin-top: 20px;
       }
     }
+    .cannabis-row {
+      padding-top: 60px;
+    }
     .mobile-flex-reverse {
       @media screen and (max-width: 768px) {
         padding-top: 40px;
@@ -65,6 +68,7 @@ export const HomeWrapper = styled.main`
     .wider {
       margin-top: 90px;
     }
+
   }
   .cbd,
   .gear {
@@ -110,6 +114,14 @@ export const HomeWrapper = styled.main`
       }
     }
   }
+
+
+
+  .cafe {
+    background-color: #F1F1F1;
+    padding: 80px 0 100px;
+  }
+
 
   .clothing-heading {
     max-width: 480px;
