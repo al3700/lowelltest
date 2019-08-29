@@ -79,6 +79,7 @@ class CBD extends Component {
         <CalloutWrapper>
           <Collection
             handle="CBD"
+            productCategory="CBD"
             products={products}
             limit={40}
             zipCodeData={zipCodeData}

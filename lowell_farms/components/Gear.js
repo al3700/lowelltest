@@ -51,7 +51,7 @@ class GearPage extends Component {
         </HeaderStyles>
 
         <CalloutWrapper>
-          <Collection handle="Gear" limit={100} products={products} />
+          <Collection handle="Gear" productCategory="Gear" limit={100} products={products} />
 
           <LearnMore className="container">
             <div className="cols-2">
