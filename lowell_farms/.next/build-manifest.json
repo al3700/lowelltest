@@ -11,11 +11,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/cafe": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/cannabis": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/cbd": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
