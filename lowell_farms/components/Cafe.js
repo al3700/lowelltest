@@ -153,8 +153,13 @@ class Cafe extends Component {
               <div class="collage-images">
               <LazyLoadImage src="static/collage/desktop/collage_4.png" className="desktop-collage-1 hide-mobile" effect="opacity"/>
               </div>
+              { cafeButtonText != '' && lowell_cafe_link != '' && (
               <a href={ lowell_cafe_link } className="button-light button" >{ cafeButtonText }</a>
-              <a href={ reservation_link } className="button-light button" >{ reservationButtonText }</a>
+              )}
+              { reservationButtonText != '' && reservation_link != '' && (
+                <a href={ reservation_link } className="button-light button" >{ reservationButtonText }</a>
+              )}
+
 
             </div>
           </section>
