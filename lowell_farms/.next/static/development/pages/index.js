@@ -341,7 +341,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "cols-2"
+        className: "cols-2 cannabis-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "vertical-aligner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -356,7 +356,7 @@ function (_Component) {
         className: "",
         effect: "opacity"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "cols-2 mobile-flex-reverse"
+        className: "cols-2 mobile-flex-reverse cannabis-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_10__["LazyLoadImage"], {
         src: pageData.cannabis_image_2.url != '' && pageData.cannabis_image_2.url,
         alt: pageData.cannabis_heading != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cannabis_heading),
@@ -368,7 +368,22 @@ function (_Component) {
         className: "home-section-title "
       }, pageData.cannabis_heading_2 != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cannabis_heading_2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "rich-text section-desc"
-      }, pageData.cannabis_text_2 != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].render(pageData.cannabis_text_2, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"]))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pageData.cannabis_text_2 != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].render(pageData.cannabis_text_2, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"])))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cols-2 cannabis-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "vertical-aligner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "home-section-title "
+      }, pageData.cannabis_heading_3 != '' && pageData.cannabis_heading_3 != null && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cannabis_heading_3)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "small-caps gold-text"
+      }, pageData.cannabis_subheader_3 != '' && pageData.cannabis_subheader_3 != null && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cannabis_subheader_3)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rich-text section-desc"
+      }, pageData.cannabis_text_3 != '' && pageData.cannabis_text_3 != null && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].render(pageData.cannabis_text_3, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_10__["LazyLoadImage"], {
+        src: pageData.cannabis_image_3 != '' & pageData.cannabis_image_3 != null && pageData.cannabis_image_3.url,
+        alt: pageData.cannabis_heading != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cannabis_heading),
+        className: "",
+        effect: "opacity"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/cannabis"
@@ -450,7 +465,32 @@ function (_Component) {
         href: "/gear"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ButtonDark__WEBPACK_IMPORTED_MODULE_6__["default"], {
         className: "wider"
-      }, pageData.accessories_button_text != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.accessories_button_text, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"]))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, pageData.accessories_button_text != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.accessories_button_text, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"]))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "cafe"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cols-2 cannabis-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "vertical-aligner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "home-section-title "
+      }, pageData.cafe_heading != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cafe_heading)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "small-caps gold-text"
+      }, pageData.cafe_subheader != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cafe_subheader)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rich-text section-desc"
+      }, pageData.cafe_intro_text != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].render(pageData.cafe_intro_text, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_lazy_load_image_component__WEBPACK_IMPORTED_MODULE_10__["LazyLoadImage"], {
+        src: pageData.cafe_image != '' && pageData.cafe_image.url,
+        alt: pageData.cafe_heading != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cafe_heading),
+        className: "",
+        effect: "opacity"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "/cafe"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ButtonDark__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        className: "wider"
+      }, pageData.cafe_button_text != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_2__["RichText"].asText(pageData.cafe_button_text, _lib_helpers__WEBPACK_IMPORTED_MODULE_3__["linkResolver"]))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Quote__WEBPACK_IMPORTED_MODULE_8__["default"], {
         quotesData: quotesData,

@@ -1054,7 +1054,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cols-2 col-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: "https://www.lowellcafe.com/"
+        href: "/cafe"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, sitewideData.data.cafe_link_text != '' && sitewideData.data.cafe_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: "/cannabis"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, sitewideData.data.cannabis_link_text != '' && sitewideData.data.cannabis_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -1501,7 +1501,7 @@ function (_Component) {
           }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "mobile-nav-links"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-            href: "https://www.lowellcafe.com/"
+            href: "/cafe"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
             onClick: toggleMobileMenu
           }, sitewideData.data.cafe_link_text != '' && sitewideData.data.cafe_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -1708,7 +1708,7 @@ function (_Component) {
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_6__["NavInner"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "left-col"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: "https://www.lowellcafe.com/"
+        href: "/cafe"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, sitewideData.data.cafe_link_text != '' && sitewideData.data.cafe_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: "/cannabis"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1946,6 +1946,7 @@ function (_Component) {
           router = _this$props.router,
           client = _this$props.client,
           products = _this$props.products;
+      console.log('test deploy');
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_1__["ThemeProvider"], {
         theme: theme
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {

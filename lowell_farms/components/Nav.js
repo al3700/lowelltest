@@ -104,7 +104,7 @@ class Nav extends Component {
           {/* LEFT COLUMN ========== */}
           <div className="left-col">
 
-          <Link href="https://www.lowellcafe.com/">
+          <Link href="/cafe">
             <a>
               {sitewideData.data.cafe_link_text != '' &&
                 sitewideData.data.cafe_link_text[0].text}

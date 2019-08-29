@@ -116,7 +116,7 @@ class Home extends Component {
 
         <section className="cannabis">
           <div className="container">
-            <div className="cols-2">
+            <div className="cols-2 cannabis-row">
               <div className="vertical-aligner">
                 <h2 className="home-section-title ">
                   {pageData.cannabis_heading != '' &&
@@ -142,7 +142,7 @@ class Home extends Component {
 
               </div>
             </div>
-            <div className="cols-2 mobile-flex-reverse">
+            <div className="cols-2 mobile-flex-reverse cannabis-row">
               <div>
               <LazyLoadImage
               src={
@@ -168,7 +168,35 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+
+            <div className="cols-2 cannabis-row">
+              <div className="vertical-aligner">
+                <h2 className="home-section-title ">
+                  {pageData.cannabis_heading_3 != '' && pageData.cannabis_heading_3 != null &&
+                    RichText.asText(pageData.cannabis_heading_3)}
+                </h2>
+                <h3 className="small-caps gold-text">
+                  {pageData.cannabis_subheader_3 != '' && pageData.cannabis_subheader_3 != null &&
+                    RichText.asText(pageData.cannabis_subheader_3)}
+                </h3>
+                <div className="rich-text section-desc">
+                  {pageData.cannabis_text_3 != '' && pageData.cannabis_text_3 != null &&
+                    RichText.render(pageData.cannabis_text_3, linkResolver)}
+                </div>
+              </div>
+              <div>
+              <LazyLoadImage src={pageData.cannabis_image_3 != '' & pageData.cannabis_image_3 != null && pageData.cannabis_image_3.url}
+              alt={
+                pageData.cannabis_heading != '' &&
+                RichText.asText(pageData.cannabis_heading)
+              }
+              className=""
+              effect="opacity"/>
+
+              </div>
+            </div>
           </div>
+
           <div className="container">
             <a href="/cannabis">
               <ButtonDark className="wider">
@@ -301,12 +329,53 @@ class Home extends Component {
             </a>
           </div>
         </section>
+
+        {/* CAFE SECTION */}
+        <section className="cafe">
+          <div className="container">
+            <div className="cols-2 cannabis-row">
+              <div className="vertical-aligner">
+                <h2 className="home-section-title ">
+                  {pageData.cafe_heading != '' &&
+                    RichText.asText(pageData.cafe_heading)}
+                </h2>
+                <h3 className="small-caps gold-text">
+                  {pageData.cafe_subheader != '' &&
+                    RichText.asText(pageData.cafe_subheader)}
+                </h3>
+                <div className="rich-text section-desc">
+                  {pageData.cafe_intro_text != '' &&
+                    RichText.render(pageData.cafe_intro_text, linkResolver)}
+                </div>
+              </div>
+              <div>
+              <LazyLoadImage src={pageData.cafe_image != '' && pageData.cafe_image.url}
+              alt={
+                pageData.cafe_heading != '' &&
+                RichText.asText(pageData.cafe_heading)
+              }
+              className=""
+              effect="opacity"/>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <a href="/cafe">
+              <ButtonDark className="wider">
+                {pageData.cafe_button_text != '' &&
+                  RichText.asText(
+                    pageData.cafe_button_text,
+                    linkResolver
+                  )}
+              </ButtonDark>
+            </a>
+          </div>
+        </section>
         {/* QUOTE SECTION */}
 
         <div className="container">
           <Quote quotesData={quotesData} index={4} styleClass="last-quote" />
         </div>
-
         <Newsletter newsletterData={newsletterData} page="home" />
       </HomeWrapper>
     );
