@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -704,7 +704,8 @@ function (_Component) {
           products = _this$props.products,
           limit = _this$props.limit,
           deliveryZipCodes = _this$props.deliveryZipCodes,
-          zipCodeData = _this$props.zipCodeData;
+          zipCodeData = _this$props.zipCodeData,
+          productCategory = _this$props.productCategory;
       var prismicProductData = {};
 
       for (var i = 0; i < products.length; i++) {
@@ -752,7 +753,8 @@ function (_Component) {
               key: product.node.id.toString(),
               productInfo: productInfo,
               handle: handle,
-              showBuyButton: showBuyButton
+              showBuyButton: showBuyButton,
+              productCategory: productCategory
             });
           }));
         });
@@ -1517,7 +1519,8 @@ function (_Component) {
           product = _this$props.product,
           productInfo = _this$props.productInfo,
           handle = _this$props.handle,
-          showBuyButton = _this$props.showBuyButton;
+          showBuyButton = _this$props.showBuyButton,
+          productCategory = _this$props.productCategory;
       var type;
       var quantity;
       var percentage;
@@ -1568,7 +1571,7 @@ function (_Component) {
         }, percentage, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, percentageUnit)));
         productBottomRow = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, weight, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, quantity));
       } else {
-        productBottomRow = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, productInfo && productInfo.data.short_description != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_3__["RichText"].asText(productInfo.data.short_description));
+        productBottomRow = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, productInfo && productInfo.data.short_description != '' && productInfo.data.short_description != null && prismic_reactjs__WEBPACK_IMPORTED_MODULE_3__["RichText"].asText(productInfo.data.short_description));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ProductCard__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -2561,7 +2564,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************!*\
   !*** multi ./pages/cannabis.js ***!
   \*********************************/

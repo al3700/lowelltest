@@ -1710,7 +1710,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: "/cafe"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: router.route == '/cbd' ? 'current-page' : ''
+        className: router.route == '/cafe' ? 'current-page' : ''
       }, sitewideData.data.cafe_link_text != '' && sitewideData.data.cafe_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: "/cannabis"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
