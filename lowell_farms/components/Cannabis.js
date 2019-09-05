@@ -76,6 +76,7 @@ class Cannabis extends Component {
 
         <CalloutWrapper>
           <Collection
+            productCategory="Cannabis"
             handle="Cannabis"
             products={products}
             deliveryZipCodes={deliveryZipCodes}

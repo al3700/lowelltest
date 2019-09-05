@@ -22,7 +22,7 @@ export default class Product extends Component {
   };
 
   render() {
-    const { product, productInfo, handle, showBuyButton } = this.props;
+    const { product, productInfo, handle, showBuyButton, productCategory } = this.props;
 
     let type;
     let quantity;
@@ -92,6 +92,7 @@ export default class Product extends Component {
         <span>
           {productInfo &&
             productInfo.data.short_description != '' &&
+            productInfo.data.short_description != null &&
             RichText.asText(productInfo.data.short_description)}
         </span>
       );

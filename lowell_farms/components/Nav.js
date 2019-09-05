@@ -105,7 +105,7 @@ class Nav extends Component {
           <div className="left-col">
 
           <Link href="/cafe">
-            <a>
+            <a className={router.route == '/cafe' ? 'current-page' : ''}>
               {sitewideData.data.cafe_link_text != '' &&
                 sitewideData.data.cafe_link_text[0].text}
             </a>

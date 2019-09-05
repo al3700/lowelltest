@@ -15,6 +15,7 @@ export default class Products extends Component {
       limit,
       deliveryZipCodes,
       zipCodeData,
+      productCategory
     } = this.props;
 
     const prismicProductData = {};
@@ -81,6 +82,7 @@ export default class Products extends Component {
                               productInfo={productInfo}
                               handle={handle}
                               showBuyButton={showBuyButton}
+                              productCategory={productCategory}
                             />
                           );
                         }
