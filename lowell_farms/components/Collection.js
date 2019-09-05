@@ -11,7 +11,6 @@ export default class Products extends Component {
   render() {
     const {
       handle,
-      productCategory,
       products,
       limit,
       deliveryZipCodes,
@@ -59,11 +58,11 @@ export default class Products extends Component {
                         ? RichText.asText(zipCodeData.cbd_exclusion_zones)
                         : '';
                     showBuyButton =
-                      (handle == 'Cannabis' || productCategory == 'Cannabis' &&
+                      (handle == 'Cannabis' &&
                         zipCode != '' &&
                         deliveryZipCodes.includes(zipCode) &&
                         zipCodeData.delivery_service_launched != 'false') ||
-                      (handle == 'CBD' || productCategory == 'CBD'&&
+                      (handle == 'CBD' &&
                         !CBDExclusionZones.includes(zipCodeState) &&
                         zipCodeData.cbd_shipping_launched != 'false');
                   }
@@ -81,7 +80,6 @@ export default class Products extends Component {
                               key={product.node.id.toString()}
                               productInfo={productInfo}
                               handle={handle}
-                              productCategory={productCategory}
                               showBuyButton={showBuyButton}
                             />
                           );

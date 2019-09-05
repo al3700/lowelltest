@@ -22,7 +22,7 @@ export default class Product extends Component {
   };
 
   render() {
-    const { product, productInfo, handle, showBuyButton, productCategory } = this.props;
+    const { product, productInfo, handle, showBuyButton } = this.props;
 
     let type;
     let quantity;
@@ -38,7 +38,7 @@ export default class Product extends Component {
       ''
     );
 
-    if (handle == 'CBD' || handle == 'Cannabis' || productCategory == 'CBD' || productCategory == 'Cannabis') {
+    if (handle == 'CBD' || handle == 'Cannabis') {
       if (productInfo != undefined) {
         type = RichText.asText(productInfo.data.type);
         quantity = RichText.asText(productInfo.data.quantity);
@@ -92,7 +92,6 @@ export default class Product extends Component {
         <span>
           {productInfo &&
             productInfo.data.short_description != '' &&
-            productInfo.data.short_description != null &&
             RichText.asText(productInfo.data.short_description)}
         </span>
       );

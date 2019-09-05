@@ -1709,7 +1709,9 @@ function (_Component) {
         className: "left-col"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: "/cafe"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, sitewideData.data.cafe_link_text != '' && sitewideData.data.cafe_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: router.route == '/cbd' ? 'current-page' : ''
+      }, sitewideData.data.cafe_link_text != '' && sitewideData.data.cafe_link_text[0].text)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
         href: "/cannabis"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: router.route == '/cannabis' ? 'current-page' : ''
@@ -2884,11 +2886,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_0__);
 
 var initGA = function initGA(gaTrackingID) {
-  console.log('GA init');
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize(gaTrackingID);
 };
 var logPageView = function logPageView() {
-  console.log('Logging pageview for ${window.location.pathname}');
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.set({
     page: window.location.pathname
   });

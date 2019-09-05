@@ -701,7 +701,6 @@ function (_Component) {
     value: function render() {
       var _this$props = this.props,
           handle = _this$props.handle,
-          productCategory = _this$props.productCategory,
           products = _this$props.products,
           limit = _this$props.limit,
           deliveryZipCodes = _this$props.deliveryZipCodes,
@@ -739,7 +738,7 @@ function (_Component) {
           if (handle !== 'Gear') {
             // RESTRICT CBD SHIPPING TO SOME STATES
             var CBDExclusionZones = zipCodeData.cbd_exclusion_zones != '' && zipCodeData.cbd_exclusion_zones != null ? prismic_reactjs__WEBPACK_IMPORTED_MODULE_5__["RichText"].asText(zipCodeData.cbd_exclusion_zones) : '';
-            showBuyButton = handle == 'Cannabis' || productCategory == 'Cannabis' && zipCode != '' && deliveryZipCodes.includes(zipCode) && zipCodeData.delivery_service_launched != 'false' || handle == 'CBD' || productCategory == 'CBD' && !CBDExclusionZones.includes(zipCodeState) && zipCodeData.cbd_shipping_launched != 'false';
+            showBuyButton = handle == 'Cannabis' && zipCode != '' && deliveryZipCodes.includes(zipCode) && zipCodeData.delivery_service_launched != 'false' || handle == 'CBD' && !CBDExclusionZones.includes(zipCodeState) && zipCodeData.cbd_shipping_launched != 'false';
           }
 
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -753,7 +752,6 @@ function (_Component) {
               key: product.node.id.toString(),
               productInfo: productInfo,
               handle: handle,
-              productCategory: productCategory,
               showBuyButton: showBuyButton
             });
           }));
@@ -1519,8 +1517,7 @@ function (_Component) {
           product = _this$props.product,
           productInfo = _this$props.productInfo,
           handle = _this$props.handle,
-          showBuyButton = _this$props.showBuyButton,
-          productCategory = _this$props.productCategory;
+          showBuyButton = _this$props.showBuyButton;
       var type;
       var quantity;
       var percentage;
@@ -1531,7 +1528,7 @@ function (_Component) {
       var typeColor;
       var productRoundedPrice = product.node.variants.edges[0].node.price.replace(/\.00$/, '');
 
-      if (handle == 'CBD' || handle == 'Cannabis' || productCategory == 'CBD' || productCategory == 'Cannabis') {
+      if (handle == 'CBD' || handle == 'Cannabis') {
         if (productInfo != undefined) {
           type = prismic_reactjs__WEBPACK_IMPORTED_MODULE_3__["RichText"].asText(productInfo.data.type);
           quantity = prismic_reactjs__WEBPACK_IMPORTED_MODULE_3__["RichText"].asText(productInfo.data.quantity);
@@ -1571,7 +1568,7 @@ function (_Component) {
         }, percentage, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, percentageUnit)));
         productBottomRow = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, weight, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, quantity));
       } else {
-        productBottomRow = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, productInfo && productInfo.data.short_description != '' && productInfo.data.short_description != null && prismic_reactjs__WEBPACK_IMPORTED_MODULE_3__["RichText"].asText(productInfo.data.short_description));
+        productBottomRow = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, productInfo && productInfo.data.short_description != '' && prismic_reactjs__WEBPACK_IMPORTED_MODULE_3__["RichText"].asText(productInfo.data.short_description));
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_ProductCard__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
