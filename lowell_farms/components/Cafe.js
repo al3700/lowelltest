@@ -129,13 +129,13 @@ class Cafe extends Component {
 
           <header>
           <LazyLoadImage src="static/collage/mobile/collage_2.png" className="mobile-collage show-mobile" effect="opacity" visibleByDefault="true"/>
-            <div class="container-sm collage-parent">
-              <div class="collage-images">
+            <div className="container-sm collage-parent">
+              <div className="collage-images">
               <LazyLoadImage src="static/collage/desktop/collage_1.png" className="desktop-collage-1 hide-mobile" effect="opacity"/>
               <LazyLoadImage src="static/collage/desktop/collage_2.png" className="desktop-collage-2 hide-mobile" effect="opacity"/>
               <LazyLoadImage src="static/collage/desktop/collage_3.png" className="desktop-collage-3 hide-mobile" effect="opacity"/>
               </div>
-              <div class="animation-wrapper">
+              <div className="animation-wrapper">
                 <h1>
                   <LazyLoadImage src={cafePageData.cafe_logo.url != '' && cafePageData.cafe_logo.url}  effect="opacity"/>
                 </h1>
@@ -148,9 +148,9 @@ class Cafe extends Component {
               </div>
             </div>
           </header>
-          <section class="prohibition">
-            <div class="container-xs collage-parent">
-              <div class="collage-images">
+          <section className="prohibition">
+            <div className="container-xs collage-parent">
+              <div className="collage-images">
               <LazyLoadImage src="static/collage/desktop/collage_4.png" className="desktop-collage-1 hide-mobile" effect="opacity"/>
               </div>
               { cafeButtonText != '' && lowell_cafe_link != '' && (
@@ -167,9 +167,9 @@ class Cafe extends Component {
           <div>
             <KeyInfo pageData={pageData}/>
           </div>
-          <section class="press">
+          <section className="press">
             { pressHeadingHtml }
-            <div class="container">
+            <div className="container">
               {pageData.press_items.map((value, index) => {
                 return (
                   <a href={value.press_link.url} target="_blank">

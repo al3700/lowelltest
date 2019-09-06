@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const DeliveryStyles = styled.div`
-  background-color: #e0dcd6;
+  background-color: #E9E7E4;
   padding-top: 90px;
   padding-bottom: 90px;
   text-align: center;
@@ -17,6 +17,9 @@ const DeliveryStyles = styled.div`
     max-width: 820px;
     padding: 0 4%;
     margin: 0 auto;
+  }
+  h2 {
+    color: #6B6653;
   }
   h2,
   h3 {
@@ -36,7 +39,7 @@ const DeliveryStyles = styled.div`
   .delivery-subheading {
     font-size: 1.8rem;
     font-family: 'Lora Regular';
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.08rem;
     margin-top: 18px;
     margin-bottom: 45px;
     @media screen and (max-width: 768px) {

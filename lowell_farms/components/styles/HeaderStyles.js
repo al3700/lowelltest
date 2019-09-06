@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   margin: 0;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   padding-top: 75px;
   padding-bottom: 50px;
@@ -26,6 +26,7 @@ const HeaderStyles = styled.header`
       position: relative;
       z-index: 3;
     }
+
     .overlay {
       content: '';
       position: absolute;
@@ -72,6 +73,9 @@ const HeaderStyles = styled.header`
     }
     &.gear-heading {
       max-width: 730px;
+    }
+    p {
+      margin: 0;
     }
   }
   .hero-image {

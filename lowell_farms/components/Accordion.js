@@ -20,13 +20,13 @@ class Accordion extends Component {
   render() {
     const { faqItem } = this.props;
     return (
-      <li class={`accordion-panel ${this.state.active ? 'expanded': null}`}  >
-        <h2 id="faq" class="accordion-toggle" onClick={this.toggleClass}>
+      <li className={`accordion-panel ${this.state.active ? 'expanded': null}`}  >
+        <h2 id="faq" className="accordion-toggle" onClick={this.toggleClass}>
           {RichText.render(faqItem.heading, linkResolver)}
           <span></span>
         </h2>
-        <div class="accordion-text">
-          <div class="inner">
+        <div className="accordion-text">
+          <div className="inner">
             {RichText.render(faqItem.faq_answer, linkResolver)}
           </div>
         </div>

@@ -7,6 +7,8 @@ const ProductCard = styled.div`
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  max-width: 560px;
+
   &:hover {
     opacity: 0.9;
     img {
@@ -17,6 +19,8 @@ const ProductCard = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 14px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .split-aligner {
     display: flex;

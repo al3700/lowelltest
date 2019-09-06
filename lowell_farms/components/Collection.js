@@ -59,17 +59,17 @@ export default class Products extends Component {
                         ? RichText.asText(zipCodeData.cbd_exclusion_zones)
                         : '';
                     showBuyButton =
-                      (handle == 'Cannabis' &&
+                      (productCategory == 'Cannabis' &&
                         zipCode != '' &&
                         deliveryZipCodes.includes(zipCode) &&
                         zipCodeData.delivery_service_launched != 'false') ||
-                      (handle == 'CBD' &&
+                      ((handle == 'CBD' || productCategory == 'CBD') &&
                         !CBDExclusionZones.includes(zipCodeState) &&
                         zipCodeData.cbd_shipping_launched != 'false');
                   }
 
                   return (
-                    <div className="cols-3 cols-2-md">
+                    <div className="cols-3-flex cols-2-md-flex">
                       {data.shop.collectionByHandle.products.edges.map(
                         product => {
                           const shopifyId = base64.decode(product.node.id);

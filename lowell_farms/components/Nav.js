@@ -50,7 +50,6 @@ class Nav extends Component {
 
   render() {
     const { router, sitewideData, client, localStorageCheckout } = this.props;
-
     return (
       <NavWrapper
         style={{
@@ -111,13 +110,13 @@ class Nav extends Component {
             </a>
           </Link>
             <Link href="/cannabis">
-              <a className={router.route == '/cannabis' ? 'current-page' : ''}>
+              <a className={router.route.includes('/cannabis') ? 'current-page' : ''}>
                 {sitewideData.data.cannabis_link_text != '' &&
                   sitewideData.data.cannabis_link_text[0].text}
               </a>
             </Link>
             <Link href="/cbd">
-              <a className={router.route == '/cbd' ? 'current-page' : ''}>
+              <a className={router.route.includes('/cbd') ? 'current-page' : ''}>
                 {sitewideData.data.cbd_link_text != '' &&
                   sitewideData.data.cbd_link_text[0].text}
               </a>

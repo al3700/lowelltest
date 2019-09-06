@@ -38,7 +38,7 @@ export default class Product extends Component {
       ''
     );
 
-    if (handle == 'CBD' || handle == 'Cannabis') {
+    if (handle == 'CBD' || productCategory == 'CBD' || productCategory == 'Cannabis') {
       if (productInfo != undefined) {
         type = RichText.asText(productInfo.data.type);
         quantity = RichText.asText(productInfo.data.quantity);

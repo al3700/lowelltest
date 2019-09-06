@@ -24,7 +24,7 @@ export default class Newsletter extends Component {
         bgColor = '#d1d3cb';
         break;
       case 'cannabis':
-        bgColor = '#C4C0B0';
+        bgColor = '#E0DDDB';
         break;
       case 'cafe':
         bgColor = '#C4C0B0';
