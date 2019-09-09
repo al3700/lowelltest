@@ -12,9 +12,18 @@ export default class BlogPost extends Component {
 
     const productsResponse = await getPageByType('product');
 
+    // Delivery section (enter your zip code)
+    const deliverySectionId = 'XXa8dhMAACEAK3v3';
+    const deliverySectionResponse = await getPageApi(deliverySectionId);
+
+    const stockistsId = 'XJbmbhEAAPHUozLk';
+    const stockistsResponse = await getPageApi(stockistsId);
+
     return {
       page: response,
       products: productsResponse,
+      stockists: stockistsResponse,
+      deliverySectionContent: deliverySectionResponse,
     };
   }
 
@@ -25,6 +34,8 @@ export default class BlogPost extends Component {
       quotes,
       products,
       zipCodes,
+      stockists,
+      deliverySectionContent,
     } = this.props;
     const { data } = page;
 
@@ -42,7 +53,8 @@ export default class BlogPost extends Component {
         products={products}
         deliveryZipCodes={cannabisDeliveryZones}
         zipCodeData={zipCodes}
-
+        stockists={stockists.data}
+        deliverySectionData={deliverySectionContent.data}
       />
     );
   }

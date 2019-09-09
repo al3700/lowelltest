@@ -19,15 +19,24 @@ class Cannabis extends Component {
   render() {
     const {
       pageData,
+      deliverySectionData,
       quotesData,
       newsletterData,
       products,
       deliveryZipCodes,
       zipCodeData,
+      stockists,
       collectionHandle,
       productCategory
     } = this.props;
     const heroBgImageUrl = pageData.hero_background_image.url;
+
+    const deliveryPlaceholderText =
+      deliverySectionData.delivery_placeholder != '' &&
+      RichText.asText(deliverySectionData.delivery_placeholder);
+    const deliveryButtonText =
+      deliverySectionData.delivery_button_text != '' &&
+      RichText.asText(deliverySectionData.delivery_button_text);
 
 
     return (
@@ -64,7 +73,16 @@ class Cannabis extends Component {
               className="hero-image"
             />
           </HeaderStyles>
-
+          <Delivery
+            deliveryZipCodes={deliveryZipCodes}
+            pageData={deliverySectionData}
+            deliveryPlaceholderText={deliveryPlaceholderText}
+            deliveryButtonText={deliveryButtonText}
+            handle={productCategory}
+            stockists={stockists}
+            zipCodeData={zipCodeData}
+          />
+          <DeliveryBanner handle="Cannabis" zipCodeData={zipCodeData} />
 
           <div className="intro-block">
             <BenefitsList className="container">
@@ -78,7 +96,7 @@ class Cannabis extends Component {
                       </h3>
                       <p className="rich-text">
                         {pageData.about_text != '' &&
-                          RichText.asText(pageData.about_text)}
+                          RichText.render(pageData.about_text)}
                       </p>
                     </div>
                   </div>

@@ -26,15 +26,16 @@ class CBD extends Component {
       zipCodeData,
       deliveryZipCodes,
       stockists,
+      deliverySectionData,
     } = this.props;
     const heroBgImageUrl = pageData.hero_background_image.url;
 
     const deliveryPlaceholderText =
-      pageData.delivery_placeholder != '' &&
-      RichText.asText(pageData.delivery_placeholder);
+      deliverySectionData.delivery_placeholder != '' &&
+      RichText.asText(deliverySectionData.delivery_placeholder);
     const deliveryButtonText =
-      pageData.delivery_button_text != '' &&
-      RichText.asText(pageData.delivery_button_text);
+      deliverySectionData.delivery_button_text != '' &&
+      RichText.asText(deliverySectionData.delivery_button_text);
 
     return (
       <main>
@@ -70,7 +71,7 @@ class CBD extends Component {
 
         <Delivery
           deliveryZipCodes={deliveryZipCodes}
-          pageData={pageData}
+          pageData={deliverySectionData}
           deliveryPlaceholderText={deliveryPlaceholderText}
           deliveryButtonText={deliveryButtonText}
           handle="CBD"

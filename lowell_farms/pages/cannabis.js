@@ -12,6 +12,10 @@ export default class BlogPost extends Component {
 
     const productsResponse = await getPageByType('product');
 
+    // Query the Prismic API with the ID of the page
+    const deliverySectionId = 'XXax2RMAACEAK00p';
+    const deliverySectionResponse = await getPageApi(deliverySectionId);
+
     const stockistsId = 'XJbmbhEAAPHUozLk';
     const stockistsResponse = await getPageApi(stockistsId);
 
@@ -19,6 +23,7 @@ export default class BlogPost extends Component {
       page: response,
       products: productsResponse,
       stockists: stockistsResponse,
+      deliverySectionContent: deliverySectionResponse,
     };
   }
 
@@ -30,6 +35,7 @@ export default class BlogPost extends Component {
       products,
       zipCodes,
       stockists,
+      deliverySectionContent,
     } = this.props;
     const { data } = page;
 
@@ -46,6 +52,7 @@ export default class BlogPost extends Component {
         deliveryZipCodes={cannabisDeliveryZones}
         zipCodeData={zipCodes}
         stockists={stockists.data}
+        deliverySectionData={deliverySectionContent.data}
       />
     );
   }

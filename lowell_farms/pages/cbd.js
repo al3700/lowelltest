@@ -11,6 +11,10 @@ export default class CBDPage extends Component {
 
     const productsResponse = await getPageByType('product');
 
+    // Delivery section (enter your zip code)
+    const deliverySectionId = 'XXa8dhMAACEAK3v3';
+    const deliverySectionResponse = await getPageApi(deliverySectionId);
+
     const stockistsId = 'XJbmbhEAAPHUozLk';
     const stockistsResponse = await getPageApi(stockistsId);
 
@@ -18,6 +22,7 @@ export default class CBDPage extends Component {
       page: response,
       products: productsResponse,
       stockists: stockistsResponse,
+      deliverySectionContent: deliverySectionResponse,
     };
   }
 
@@ -29,6 +34,7 @@ export default class CBDPage extends Component {
       products,
       stockists,
       zipCodes,
+      deliverySectionContent,
     } = this.props;
     const { data } = page;
 
@@ -44,6 +50,7 @@ export default class CBDPage extends Component {
         stockists={stockists.data}
         zipCodeData={zipCodes}
         deliveryZipCodes={cannabisDeliveryZones}
+        deliverySectionData={deliverySectionContent.data}
       />
     );
   }
