@@ -82,7 +82,7 @@ class Cannabis extends Component {
             stockists={stockists}
             zipCodeData={zipCodeData}
           />
-          <DeliveryBanner handle="Cannabis" zipCodeData={zipCodeData} />
+          <DeliveryBanner handle={productCategory} zipCodeData={zipCodeData} />
 
           <div className="intro-block">
             <BenefitsList className="container">

@@ -77,7 +77,7 @@ class Delivery extends Component {
             zipCodeState == 'CA' &&
             !deliveryZipCodes.includes(zipCode)
           ) {
-            screen = 'stockists';
+            // screen = 'stockists';
           } else if (handle == 'Cannabis' && zipCodeState != 'CA') {
             screen = 'ship';
           }

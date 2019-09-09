@@ -96,6 +96,8 @@ class DeliveryBanner extends Component {
                 screen = 'cbd-not-available';
               } else if (handle == 'CBD' && zipCodeState != 'CA') {
                 screen = 'cbd-ship';
+              } else if (handle == 'CBD') {
+                return null;
               }
 
               // console.log(screen);
@@ -112,6 +114,8 @@ class DeliveryBanner extends Component {
                 screen = 'cannabis-stockists';
               } else if (handle == 'Cannabis' && zipCodeState == 'CA') {
                 screen = 'cannabis-deliver';
+              } else if (handle == 'Cannabis') {
+                return null;
               }
 
               // WE DELIVER CANNABIS TO YOUR LOCATION SCREEN
