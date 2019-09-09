@@ -100,7 +100,7 @@ class CBD extends Component {
                         <ButtonLight className="button">CBD Smokes</ButtonLight>
                       </Link>
                       <Link href="/cbd/flower">
-                        <ButtonLight className="button">CBD Smokes</ButtonLight>
+                        <ButtonLight className="button">CBD Flower</ButtonLight>
                       </Link>
                     </div>
                   </div>

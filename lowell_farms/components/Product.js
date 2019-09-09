@@ -8,6 +8,7 @@ import ProductCard from './styles/ProductCard';
 
 import AddToCart from './AddToCart';
 import Title from './styles/Title';
+import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component';
 
 export default class Product extends Component {
   static propTypes = {
@@ -109,10 +110,7 @@ export default class Product extends Component {
           <div onClick={this.preventBubbling}>
             {' '}
             {productInfo && productInfo.data.landing_page_image != '' && (
-              <img
-                src={productInfo.data.landing_page_image.url}
-                alt={`${product.node.title} product shot`}
-              />
+              <LazyLoadImage src={productInfo.data.landing_page_image.url} alt={`${product.node.title} product shot`} effect="opacity"/>
             )}
             <Title>
               {productTopRow}

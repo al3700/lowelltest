@@ -35,7 +35,7 @@ export default class BlogPost extends Component {
     return (
       <SubLandingPage
         pageData={data}
-        collectionHandle="Flower"
+        collectionHandle="Vape"
         productCategory="Cannabis"
         newsletterData={newsletter}
         quotesData={quotes}

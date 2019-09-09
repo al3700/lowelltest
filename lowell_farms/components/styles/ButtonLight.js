@@ -18,9 +18,13 @@ const ButtonLight = styled.button`
 	text-align: center;
 	color: white;
   background: white;
-  color: #B9AC88;
+  color: #8B8061;
   margin-top: 0;
   margin-bottom: 14px;
+	&:hover {
+		background-color: #F9F9F9;
+		transform: translateY(2px);
+	}
 
   @media only screen and (min-width: 900px) {
     min-width: 328px;
