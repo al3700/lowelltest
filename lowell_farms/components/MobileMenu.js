@@ -113,6 +113,12 @@ class MobileMenu extends Component {
                           sitewideData.data.stockists_link_text[0].text}
                       </a>
                     </Link>
+                    <Link href="/blog">
+                      <a onClick={toggleMobileMenu}>
+                        {sitewideData.data.blog_link_text != '' &&
+                          sitewideData.data.blog_link_text[0].text}
+                      </a>
+                    </Link>
                     <Link href="/about">
                       <a onClick={toggleMobileMenu}>
                         {sitewideData.data.about_link_text != '' &&

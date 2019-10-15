@@ -29,7 +29,7 @@ class Page extends Component {
         this.props.sitewideData.data.landing_app_ga_id
       );
       initGA(gaAppId);
-      console.log(gaAppId);
+      // console.log(gaAppId);
       window.GA_INITIALIZED = true;
     }
     logPageView();

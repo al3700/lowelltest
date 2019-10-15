@@ -149,6 +149,12 @@ class Nav extends Component {
                   sitewideData.data.stockists_link_text[0].text}
               </a>
             </Link>
+            <Link href="/blog">
+              <a className={router.route == '/blog' ? 'current-page' : ''}>
+                {sitewideData.data.blog_link_text != '' &&
+                  sitewideData.data.blog_link_text[0].text}
+              </a>
+            </Link>
             <Link href="/about">
               <a className={router.route == '/about' ? 'current-page' : ''}>
                 {sitewideData.data.about_link_text != '' &&

@@ -140,6 +140,12 @@ class Footer extends Component {
                           sitewideData.data.stockists_link_text[0].text}
                     </a>
                   </Link>
+                  <Link href="/blog">
+                    <a>
+                      {sitewideData.data.blog_link_text != '' &&
+                        sitewideData.data.blog_link_text[0].text}
+                    </a>
+                  </Link>
                   <Link href="/about">
                     <a>
                       {sitewideData.data.about_link_text != '' &&

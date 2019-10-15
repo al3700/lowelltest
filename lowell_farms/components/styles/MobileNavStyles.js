@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const MobileNav = styled.nav`
   /* Styles to override desktop styles in NavStyles.js */
   display: none;
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 1050px) {
     display: block;
     .mobile-navbar {
       display: flex;
@@ -106,7 +106,7 @@ export const MobileNav = styled.nav`
   .mobile-nav {
     display: none;
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1050px) {
       transform: translateX(-100%);
       transition: all 0.3s ease-in-out;
       background-color: #2b2b2b;

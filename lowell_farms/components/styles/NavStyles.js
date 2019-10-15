@@ -8,7 +8,7 @@ export const NavWrapper = styled.div`
   top: 0;
   width: 100%;
   transition: transform 0.3s ease-out;
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 1050px) {
     transform: none !important;
     background-color: transparent;
   }
@@ -57,7 +57,7 @@ export const NavWrapper = styled.div`
     margin: 0 0 0 20px;
     padding: 18px 30px;
     position: relative;
-    @media only screen and (max-width: 1150px) {
+    @media only screen and (max-width: 1250px) {
       padding: 18px 16px;
     }
   }
@@ -85,7 +85,7 @@ export const NavWrapper = styled.div`
   .show-mobile-nav {
     display: none;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1050px) {
     .hide-mobile-nav {
       display: none;
     }
@@ -97,7 +97,7 @@ export const NavWrapper = styled.div`
 
 export const NavInner = styled.nav`
   display: none;
-  @media screen and (min-width: 961px) {
+  @media screen and (min-width: 1051px) {
 
     display: flex;
     flex-direction: row;
@@ -105,12 +105,12 @@ export const NavInner = styled.nav`
     align-items: center;
     position: relative;
     z-index: 100;
-    @media only screen and (min-width: 961px) {
+    @media only screen and (min-width: 1051px) {
       .close-mobile-nav {
         display: none;
       }
     }
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: 1050px) {
       .hide-mobile-nav {
         display: none;
       }
@@ -130,7 +130,7 @@ export const NavInner = styled.nav`
       padding: 31px 50px 31px 40px;
       background-color: #3B3F38;
       position: relative;
-      @media only screen and (max-width: 1150px) {
+      @media only screen and (max-width: 1250px) {
         padding: 31px 20px 31px 20px;
       }
     }
