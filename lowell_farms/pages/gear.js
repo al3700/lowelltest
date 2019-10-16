@@ -21,6 +21,8 @@ export default class Gear extends Component {
     const { page, newsletter, quotes, products } = this.props;
     const { data } = page;
 
+
+
     return (
       <GearPage
         pageData={data}

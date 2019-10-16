@@ -23,7 +23,7 @@ export default class Gear extends Component {
     return (
       <BlogLanding
         blogEntries={entries}
-        pageData={pageData.data}
+        pageData={pageData}
       />
     );
   }
