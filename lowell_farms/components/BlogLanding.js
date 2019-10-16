@@ -36,8 +36,8 @@ class BlogLanding extends Component {
     var settings = {
       dots: true,
       infinite: true,
-      arrows: false,
-      autoplay: true,
+      arrows: true,
+      autoplay: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1

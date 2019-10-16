@@ -245,7 +245,7 @@ injectGlobal`
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
     padding-top: 76px;
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1050px) {
     padding-top: 40px;
 
     }

@@ -19,6 +19,38 @@ export const BlogLandingWrapper = styled.main`
       cursor: pointer;
     }
   }
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: transparent;
+    z-index: 20;
+    &::before {
+      cursor: pointer;
+      display: block;
+      width: 68px;
+      padding: 8px;
+    }
+  }
+  .slick-prev {
+    left: 30px;
+    &::before {
+      content: url('../../static/arrow-left.svg');
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .slick-next {
+    right: 30px;
+    &::before {
+      content: url('../../static/arrow-right.svg');
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
   .slick-dots .slick-active {
     opacity: 1;
   }
@@ -43,7 +75,7 @@ export const BlogLandingWrapper = styled.main`
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 30%;
     display: block;
     .text-info {
       position: absolute;
@@ -96,47 +128,50 @@ export const BlogLandingWrapper = styled.main`
     > .article-square {
       margin-top: 6px;
     }
-    > .article-square:nth-of-type(6n+1) {
-      width: calc(60% - 3px);
-      padding-bottom: 28%;
-      float: left;
-      margin-right: 3px;
+    @media only screen and (min-width: 1050px) {
+      > .article-square:nth-of-type(6n+1) {
+        width: calc(60% - 3px);
+        padding-bottom: 28%;
+        float: left;
+        margin-right: 3px;
+      }
+      > .article-square:nth-of-type(6n+2) {
+        width: calc(40% - 3px);
+        padding-bottom: 28%;
+        float: right;
+        margin-left: 3px;
+      }
+      > .article-square:nth-of-type(6n+3) {
+        clear: left;
+        width: calc(25% - 3px);
+        margin-right: 3px;
+        padding-bottom: 20%;
+        float: left;
+      }
+      > .article-square:nth-of-type(6n+4) {
+        clear: right;
+        float: left;
+        width: calc(25% - 6px);
+        margin-right: 3px;
+        margin-left: 3px;
+        padding-bottom: 20%;
+      }
+      > .article-square:nth-of-type(6n+5) {
+        clear: right;
+        width: calc(50% - 3px);
+        padding-bottom: calc(40% + 6px);
+        float: right;
+        margin-left: 3px;
+      }
+      > .article-square:nth-of-type(6n+6) {
+        clear: left;
+        float: left;
+        width: calc(50% - 3px);
+        padding-bottom: 20%;
+        margin-right: 3px;
+      }
     }
-    > .article-square:nth-of-type(6n+2) {
-      width: calc(40% - 3px);
-      padding-bottom: 28%;
-      float: right;
-      margin-left: 3px;
-    }
-    > .article-square:nth-of-type(6n+3) {
-      clear: left;
-      width: calc(25% - 3px);
-      margin-right: 3px;
-      padding-bottom: 20%;
-      float: left;
-    }
-    > .article-square:nth-of-type(6n+4) {
-      clear: right;
-      float: left;
-      width: calc(25% - 6px);
-      margin-right: 3px;
-      margin-left: 3px;
-      padding-bottom: 20%;
-    }
-    > .article-square:nth-of-type(6n+5) {
-      clear: right;
-      width: calc(50% - 3px);
-      padding-bottom: calc(40% + 6px);
-      float: right;
-      margin-left: 3px;
-    }
-    > .article-square:nth-of-type(6n+6) {
-      clear: left;
-      float: left;
-      width: calc(50% - 3px);
-      padding-bottom: 20%;
-      margin-right: 3px;
-    }
+
 
   }
 
@@ -154,6 +189,12 @@ export const BlogDetailWrapper = styled.main`
     letter-spacing: .07em;
     line-height: 1.1;
     margin: 8px 0;
+    @media only screen and (max-width: 1050px) {
+      font-size: 5rem;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 4.5rem;
+    }
   }
   header {
     img {
@@ -168,7 +209,7 @@ export const BlogDetailWrapper = styled.main`
     }
   }
   .text-content {
-    width: 100%;
+    width: calc(100% - 60px);
     max-width: 888px;
     margin-left: auto;
     margin-right: auto;
@@ -227,6 +268,7 @@ export const BlogDetailWrapper = styled.main`
     width: 100%;
     height: 0;
     padding-bottom: 100%;
+    display: block;
     .text-info {
       position: absolute;
       bottom: 30px;
