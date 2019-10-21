@@ -84,7 +84,6 @@ class BlogDetail extends Component {
             <meta name="keywords" content={pageData.data.keywords} />
           )}
 
-          <link href="https://www.lowellfarms.com/blog" rel="canonical" />
           {pageData.data.meta_title != null && (
             <meta property="og:title" content={pageData.data.meta_title} />
           )}
