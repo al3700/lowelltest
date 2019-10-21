@@ -28,7 +28,7 @@ class BlogDetail extends Component {
       const twitterUrl = "https://twitter.com/share?url=" + window.location.href + "&text=" + title + "&lang=en"
       this.setState({twitterUrl: twitterUrl});
 
-      const facebookUrl = "http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + window.location.href;
+      const facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
       this.setState({facebookUrl: facebookUrl});
 
     }
@@ -72,6 +72,18 @@ class BlogDetail extends Component {
 
     return (
       <BlogDetailWrapper>
+        <Head>
+          {pageData.meta_description != null && (
+            <title> {pageData.meta_title}</title>
+          )}
+          {pageData.meta_description != null && (
+            <meta name="description" content={pageData.meta_description} />
+          )}
+          {pageData.keywords != null && (
+            <meta name="keywords" content={pageData.keywords} />
+          )}
+          <link href="https://www.lowellfarms.com/cannabis" rel="canonical" />
+        </Head>
         <header>
           <img
           src={detailImage && detailImage}
@@ -98,10 +110,10 @@ class BlogDetail extends Component {
 
               <p>
                 {this.state.facebookUrl && (
-                  <a href={this.state.facebookUrl} target="_blank" class="social-f"><img src="../static/facebook.png" alt="" width="20"/></a>
+                  <a href={this.state.facebookUrl} target="_blank" rel="noopener" class="social-f"><img src="../static/facebook.png" alt="" width="20"/></a>
                 )}
                 {this.state.twitterUrl && (
-                  <a href={this.state.twitterUrl} target="_blank" class="social-t"><img src="../static/twitter.png" alt="" width="20"/></a>
+                  <a href={this.state.twitterUrl} target="_blank" rel="noopener" class="social-t"><img src="../static/twitter.png" alt="" width="20"/></a>
                 )}
               </p>
             </div>
