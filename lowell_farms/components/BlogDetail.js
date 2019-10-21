@@ -14,6 +14,7 @@ class BlogDetail extends Component {
   state = {
     twitterUrl: '',
     facebookUrl: '',
+    url: '',
   };
 
   componentDidMount() {
@@ -30,6 +31,8 @@ class BlogDetail extends Component {
 
       const facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
       this.setState({facebookUrl: facebookUrl});
+      this.setState({url: window.location.href});
+
 
     }
   }
@@ -84,6 +87,12 @@ class BlogDetail extends Component {
             <meta name="keywords" content={pageData.data.keywords} />
           )}
 
+          {this.state.url && (
+            <meta property="og:url" content={this.state.url} />
+          )}
+          {this.state.url && (
+            <link href={this.state.url} rel="canonical" />
+          )}
           {pageData.data.meta_title != null && (
             <meta property="og:title" content={pageData.data.meta_title} />
           )}
