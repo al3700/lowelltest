@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-// ----------------------------------------
-// General Page Styles
-// ----------------------------------------
 export const BlogLandingWrapper = styled.main`
   .slick-dots li {
     color: transparent;
@@ -171,15 +168,9 @@ export const BlogLandingWrapper = styled.main`
         margin-right: 3px;
       }
     }
-
-
   }
-
 `;
 
-// ----------------------------------------
-// Contact Section
-// ----------------------------------------
 export const BlogDetailWrapper = styled.main`
 
   h1 {
@@ -206,6 +197,15 @@ export const BlogDetailWrapper = styled.main`
       padding-bottom: 44px;
       border-bottom: 1px solid #979797;
       margin-bottom: 44px;
+    }
+    .social-f {
+      width: 7px;
+      display: inline-block;
+      margin-right: 22px;
+    }
+    .social-t {
+      width: 20px;
+      display: inline-block;
     }
   }
   .text-content {

@@ -11,6 +11,29 @@ import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-componen
 import { Mutation, Query } from 'react-apollo';
 
 class BlogDetail extends Component {
+  state = {
+    twitterUrl: '',
+    facebookUrl: '',
+  };
+
+  componentDidMount() {
+    // Once window object is available, create share links
+    if (window) {
+      const entry = this.props.pageData.data;
+      const bodyPlainText = entry.body != '' && entry.body !=  null && RichText.asText(entry.body);
+      const shareText = bodyPlainText.substring(1, 40);
+      const title = entry.title != '' && entry.title !=  null && RichText.asText(entry.title);
+
+
+      const twitterUrl = "https://twitter.com/share?url=" + window.location.href + "&text=" + title + "&lang=en"
+      this.setState({twitterUrl: twitterUrl});
+
+      const facebookUrl = "http://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + window.location.href;
+      this.setState({facebookUrl: facebookUrl});
+
+    }
+  }
+
   render() {
     const { pageData, entries } = this.props;
     const entry = pageData.data;
@@ -19,10 +42,14 @@ class BlogDetail extends Component {
 
     const title = entry.title != '' && entry.title !=  null && RichText.asText(entry.title);
     const author = entry.author != '' && entry.author !=  null && RichText.asText(entry.author);
+    const authorLink = entry.author_link != '' && entry.author_link !=  null && entry.author_link.url;
     const detailImage = entry.blog_detail_image != '' && entry.blog_detail_image !=  null && entry.blog_detail_image.url;
     const bodyText = entry.body != '' && entry.body !=  null && RichText.render(entry.body);
     const landingImage = entry.landing_image != '' && entry.landing_image !=  null && entry.landing_image.url;
     let categories = pageData.tags;
+    const bodyPlainText = entry.body != '' && entry.body !=  null && RichText.asText(entry.body);
+    const shareText = bodyPlainText.substring(1, 40);
+    let twitterShare = "https://twitter.com/share?url=" +  "&text=" + shareText + "+" + title + "&lang=en";
 
     categories = categories.filter(tag => tag.toLowerCase() != 'featured');
 
@@ -62,9 +89,21 @@ class BlogDetail extends Component {
                 );
               })}
               <h1>{title}</h1>
-              {author && (
-                <h3 className="author">By {author}</h3>
-              )}
+              <a href={authorLink && authorLink}>
+                {author && (
+                  <h3 className="author">By {author}</h3>
+                )}
+              </a>
+
+
+              <p>
+                {this.state.facebookUrl && (
+                  <a href={this.state.facebookUrl} target="_blank" class="social-f"><img src="../static/facebook.png" alt="" width="20"/></a>
+                )}
+                {this.state.twitterUrl && (
+                  <a href={this.state.twitterUrl} target="_blank" class="social-t"><img src="../static/twitter.png" alt="" width="20"/></a>
+                )}
+              </p>
             </div>
 
         </header>

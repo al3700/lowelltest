@@ -19,6 +19,7 @@ class LowellApp extends App {
 
     // This exposes the query to the user
     pageProps.query = ctx.query;
+    pageProps.pathname = ctx.asPath;
 
     // we get the pageId of the post so that we can
     // query the API with it
@@ -53,6 +54,8 @@ class LowellApp extends App {
       router,
       productsResponse,
     } = this.props;
+
+    pageProps.router = router;
 
     return (
       <Container>

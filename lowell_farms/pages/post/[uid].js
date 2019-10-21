@@ -13,7 +13,9 @@ export default class Gear extends Component {
   }
 
   render() {
-    const { entries, query } = this.props;
+    const { entries, query, pathname } = this.props;
+
+    console.log(pathname);
 
     entries.sort(function( a, b ){
       return new Date(b.data.article_date) - new Date(a.data.article_date);
@@ -22,10 +24,12 @@ export default class Gear extends Component {
 
     const blogEntry = entries.filter(entry => entry.uid == query.uid);
 
+
     return (
       <BlogDetail
         pageData={blogEntry[0]}
         entries={entries}
+
       />
     );
   }

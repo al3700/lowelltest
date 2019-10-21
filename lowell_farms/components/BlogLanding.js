@@ -100,6 +100,7 @@ class BlogLanding extends Component {
               );
             })}
             <h4>{title}</h4>
+
             </span>
             </a>
             </Link>
