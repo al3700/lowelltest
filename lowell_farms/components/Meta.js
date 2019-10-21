@@ -26,7 +26,6 @@ export default class Meta extends Component {
         <meta property="og:title" content="Lowell Herb Co" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={metaImage} />
-
       </Head>
     );
   }

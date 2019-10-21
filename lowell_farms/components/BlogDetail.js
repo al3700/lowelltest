@@ -73,16 +73,22 @@ class BlogDetail extends Component {
     return (
       <BlogDetailWrapper>
         <Head>
-          {pageData.meta_description != null && (
-            <title> {pageData.meta_title}</title>
+          {pageData.data.meta_description != null && (
+            <meta property="og:title" content={pageData.data.meta_title} />
           )}
-          {pageData.meta_description != null && (
-            <meta name="description" content={pageData.meta_description} />
+          {pageData.data.meta_description != null && (
+            <title> {pageData.data.meta_title}</title>
           )}
-          {pageData.keywords != null && (
-            <meta name="keywords" content={pageData.keywords} />
+          {pageData.data.meta_description != null && (
+            <meta name="description" content={pageData.data.meta_description} />
           )}
-          <link href="https://www.lowellfarms.com/cannabis" rel="canonical" />
+          {pageData.data.keywords != null && (
+            <meta name="keywords" content={pageData.data.keywords} />
+          )}
+          {detailImage && (
+            <meta property="og:image" content={detailImage} />
+          )}
+          <link href="https://www.lowellfarms.com/blog" rel="canonical" />
         </Head>
         <header>
           <img
