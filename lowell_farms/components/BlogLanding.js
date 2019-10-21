@@ -56,6 +56,12 @@ class BlogLanding extends Component {
             <meta name="keywords" content={pageData.keywords} />
           )}
           <link href="https://www.lowellfarms.com/blog" rel="canonical" />
+          {pageData.meta_title != null && (
+            <meta property="og:title" content={pageData.meta_title} />
+          )}
+          {pageData.meta_description != null && (
+            <meta property="og:description" content={pageData.meta_description} />
+          )}
         </Head>
 
 

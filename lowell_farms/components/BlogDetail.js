@@ -48,7 +48,7 @@ class BlogDetail extends Component {
     const landingImage = entry.landing_image != '' && entry.landing_image !=  null && entry.landing_image.url;
     let categories = pageData.tags;
     const bodyPlainText = entry.body != '' && entry.body !=  null && RichText.asText(entry.body);
-    const shareText = bodyPlainText.substring(1, 40);
+    const shareText = bodyPlainText.substring(0, 200);
     let twitterShare = "https://twitter.com/share?url=" +  "&text=" + shareText + "+" + title + "&lang=en";
 
     categories = categories.filter(tag => tag.toLowerCase() != 'featured');
@@ -73,9 +73,7 @@ class BlogDetail extends Component {
     return (
       <BlogDetailWrapper>
         <Head>
-          {pageData.data.meta_description != null && (
-            <meta property="og:title" content={pageData.data.meta_title} />
-          )}
+
           {pageData.data.meta_description != null && (
             <title> {pageData.data.meta_title}</title>
           )}
@@ -85,10 +83,17 @@ class BlogDetail extends Component {
           {pageData.data.keywords != null && (
             <meta name="keywords" content={pageData.data.keywords} />
           )}
+
+          <link href="https://www.lowellfarms.com/blog" rel="canonical" />
+          {pageData.data.meta_title != null && (
+            <meta property="og:title" content={pageData.data.meta_title} />
+          )}
+          {shareText != null && (
+            <meta property="og:description" content={shareText} />
+          )}
           {detailImage && (
             <meta property="og:image" content={detailImage} />
           )}
-          <link href="https://www.lowellfarms.com/blog" rel="canonical" />
         </Head>
         <header>
           <img

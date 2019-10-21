@@ -21,7 +21,7 @@ class GearPage extends Component {
     return (
       <main>
         <Head>
-          {pageData.meta_description != null && (
+          {pageData.meta_title != null && (
             <title> {pageData.meta_title}</title>
           )}
           {pageData.meta_description != null && (
@@ -31,6 +31,15 @@ class GearPage extends Component {
             <meta name="keywords" content={pageData.keywords} />
           )}
           <link href="https://www.lowellfarms.com/gear" rel="canonical" />
+          {pageData.meta_title != null && (
+            <meta property="og:title" content={pageData.meta_title} />
+          )}
+          {pageData.meta_description != null && (
+            <meta property="og:description" content={pageData.meta_description} />
+          )}
+          {pageData.hero_image && (
+            <meta property="og:image" content={pageData.hero_image.url} />
+          )}
         </Head>
         <HeaderStyles
           style={{

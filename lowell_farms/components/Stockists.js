@@ -57,7 +57,7 @@ class Stockists extends Component {
     return (
       <div>
         <Head>
-          {pageData.meta_description != null && (
+          {pageData.meta_title != null && (
             <title> {pageData.meta_title}</title>
           )}
           {pageData.meta_description != null && (
@@ -67,6 +67,12 @@ class Stockists extends Component {
             <meta name="keywords" content={pageData.keywords} />
           )}
           <link href="https://www.lowellfarms.com/stockists" rel="canonical" />
+          {pageData.meta_title != null && (
+            <meta property="og:title" content={pageData.meta_title} />
+          )}
+          {pageData.meta_description != null && (
+            <meta property="og:description" content={pageData.meta_description} />
+          )}
         </Head>
         <Query query={ZIP_CODE_QUERY}>
           {({ data: { zipCode } }) => {

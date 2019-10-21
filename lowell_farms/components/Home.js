@@ -29,7 +29,7 @@ class Home extends Component {
   };
 
   render() {
-    const { pageData, quotesData, newsletterData } = this.props;
+    const { pageData, quotesData, newsletterData, sitewideData } = this.props;
     const heroBgImageUrl = pageData.hero_background_image.url;
 
     const videoClassName = this.state.videoOpen ? 'showing' : '';
@@ -62,6 +62,15 @@ class Home extends Component {
           <title>{metaTitle}</title>
           {pageData.meta_description != null && (
             <meta name="description" content={pageData.meta_description} />
+          )}
+          {metaTitle != null && (
+            <meta property="og:title" content={metaTitle} />
+          )}
+          {pageData.meta_description != null && (
+            <meta property="og:description" content={pageData.meta_description} />
+          )}
+          {sitewideData.data.social_sharing_image && (
+            <meta property="og:image" content={sitewideData.data.social_sharing_image.url} />
           )}
           {pageData.keywords != null && (
             <meta name="keywords" content={pageData.keywords} />

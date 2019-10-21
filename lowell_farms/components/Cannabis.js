@@ -39,7 +39,8 @@ class Cannabis extends Component {
     return (
       <main>
         <Head>
-          {pageData.meta_description != null && (
+
+          {pageData.meta_title != null && (
             <title> {pageData.meta_title}</title>
           )}
           {pageData.meta_description != null && (
@@ -49,6 +50,15 @@ class Cannabis extends Component {
             <meta name="keywords" content={pageData.keywords} />
           )}
           <link href="https://www.lowellfarms.com/cannabis" rel="canonical" />
+          {pageData.meta_title != null && (
+            <meta property="og:title" content={pageData.meta_title} />
+          )}
+          {pageData.meta_description != null && (
+            <meta property="og:description" content={pageData.meta_description} />
+          )}
+          {pageData.hero_background_image.url && (
+            <meta property="og:image" content={pageData.hero_background_image.url} />
+          )}
         </Head>
         <HeaderStyles
           style={{
