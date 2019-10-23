@@ -82,8 +82,8 @@ class BlogLanding extends Component {
 
           return (
             <Link
-            href={`/post/[uid]`}
-            as={`/post/${entry.uid}`}
+            href={`/blog/[uid]`}
+            as={`/blog/${entry.uid}`}
             key={
               blogEntry.title != '' &&
               blogEntry.title != null &&
@@ -131,8 +131,8 @@ class BlogLanding extends Component {
 
             return (
               <Link
-              href={`/post/[uid]`}
-              as={`/post/${entry.uid}`}
+              href={`/blog/[uid]`}
+              as={`/blog/${entry.uid}`}
               key={
                 blogEntry.title != '' &&
                 blogEntry.title != null &&

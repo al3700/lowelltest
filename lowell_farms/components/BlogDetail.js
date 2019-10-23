@@ -158,8 +158,8 @@ class BlogDetail extends Component {
 
               return (
                 <Link
-                  href={`/post/[uid]`}
-                  as={`/post/${article.uid}`}
+                  href={`/blog/[uid]`}
+                  as={`/blog/${article.uid}`}
                   key={`related-${index}`}
                 >
                   <a
