@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 import base64 from 'base-64';
 import HempProductDetail from './HempProductDetail';
 import GearProductDetail from './GearProductDetail';
+import Head from 'next/head';
 
 class ProductDetail extends Component {
   render() {

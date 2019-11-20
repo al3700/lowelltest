@@ -264,6 +264,27 @@ class ProductPage extends Component {
             <meta name="keywords" content={productInfo.keywords} />
           )}
         </Head>
+        <div>
+          <div itemType="http://schema.org/Product" itemScope>
+            <meta itemProp="name" content={shopifyProduct.title} />
+            {/* <meta itemProp="url" content="Executive Anvil" /> */}
+
+            <link itemProp="image" href={ productInfo && productInfo.product_detail_image != '' && productInfo.product_detail_image.url } />
+            <meta itemProp="description" content={productInfo && RichText.asText(productInfo.product_description)} />
+            <div itemProp="offers" itemType="http://schema.org/Offer" itemScope>
+              {/* <link itemProp="url" href="https://example.com/anvil" /> */}
+              <meta itemProp="availability" content="https://schema.org/InStock" />
+              <meta itemProp="priceCurrency" content="USD" />
+              <meta itemProp="price" content={shopifyProduct.variants.edges[0].node.price} />
+              <div itemProp="seller" itemType="http://schema.org/Organization" itemScope>
+                <meta itemProp="name" content="Lowell" />
+              </div>
+            </div>
+            <div itemProp="brand" itemType="http://schema.org/Thing" itemScope>
+              <meta itemProp="name" content="Lowell Herb Co" />
+            </div>
+          </div>
+        </div>
         <div className="container header">
           <div className="cols-55p">
             <div className="vertical-aligner">
