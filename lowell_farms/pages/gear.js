@@ -6,7 +6,7 @@ import GearPage from '../components/Gear';
 export default class Gear extends Component {
   static async getInitialProps() {
     // Query the Prismic API with the ID of the page
-    const pageId = 'XKVAvxAAAB2iwm_U';
+    const pageId = 'XestphEAAF9dW4ow';
     const response = await getPageApi(pageId);
 
     const productsResponse = await getPageByType('gear_product');

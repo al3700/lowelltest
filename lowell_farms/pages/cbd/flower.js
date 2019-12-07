@@ -7,16 +7,16 @@ import SubLandingPage from '../../components/CannabisSubpage';
 export default class BlogPost extends Component {
   static async getInitialProps() {
     // Query the Prismic API with the ID of the page
-    const pageId = 'XXGn0xMAACIAFWby';
+    const pageId = 'Xeso1xEAABpeW3Te';
     const response = await getPageApi(pageId);
 
     const productsResponse = await getPageByType('product');
 
     // Delivery section (enter your zip code)
-    const deliverySectionId = 'XXa8dhMAACEAK3v3';
+    const deliverySectionId = 'XeslgxEAAJpcW2YU';
     const deliverySectionResponse = await getPageApi(deliverySectionId);
 
-    const stockistsId = 'XJbmbhEAAPHUozLk';
+    const stockistsId = 'Xev6bxEAABBnXxL4';
     const stockistsResponse = await getPageApi(stockistsId);
 
     return {

@@ -23,20 +23,20 @@ class LowellApp extends App {
 
     // we get the pageId of the post so that we can
     // query the API with it
-    const newsletterId = 'XJaUEREAAPPUockM';
+    const newsletterId = 'XeslrREAAJpcW2bS';
     const newsletterResponse = await getPageApi(newsletterId);
 
     pageProps.newsletter = newsletterResponse.data;
 
-    const quotesId = 'XJg4xREAAAlxqQS5';
+    const quotesId = 'XesiMBEAAF9dW1dK';
     const quotesResponse = await getPageApi(quotesId);
     pageProps.quotes = shuffle(quotesResponse.data.quotes);
 
-    const sitewideId = 'XKKYKhAAALlLtsLv';
+    const sitewideId = 'XevxghEAAJNmXuuW';
     const sitewideResponse = await getPageApi(sitewideId);
     pageProps.sitewideData = sitewideResponse;
 
-    const zipCodesId = 'XLqXaBIAACIAacfs';
+    const zipCodesId = 'Xesh4hEAAF9dW1Xw';
     const zipCodesResponse = await getPageApi(zipCodesId);
     pageProps.zipCodes = zipCodesResponse.data;
 

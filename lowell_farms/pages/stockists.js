@@ -9,7 +9,7 @@ export default class StockistsPage extends Component {
   static async getInitialProps() {
     // we get the pageId of the post so that we can
     // query the API with it
-    const pageId = 'XJbmbhEAAPHUozLk';
+    const pageId = 'Xev6bxEAABBnXxL4';
     const response = await getPageApi(pageId);
     return {
       page: response,

@@ -11,7 +11,7 @@ const getPageAPI = async params => {
     // the type of blog_post and order them. Full docs can be found here:
     // https://github.com/prismicio/prismic-javascript#query-the-content
     const response = await API.query(
-      Prismic.Predicates.at('document.id', 'XJQ79BEAADCUl60m')
+      Prismic.Predicates.at('document.id', 'XespnxEAAD1dW3hU')
     );
     return response;
   } catch (error) {

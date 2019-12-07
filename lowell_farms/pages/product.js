@@ -6,13 +6,13 @@ import ProductDetail from '../components/ProductDetail';
 class productDetailPage extends Component {
   static async getInitialProps() {
     // Query the Prismic API with the ID of the page
-    const pageId = 'XKFQDxAAADkksUUv';
+    const pageId = 'XeskixEAAF9dW2HD';
     const response = await getPageApi(pageId);
 
     const productsResponse = await getPageByType('product');
     const gearProductsResponse = await getPageByType('gear_product');
 
-    const stockistsId = 'XJbmbhEAAPHUozLk';
+    const stockistsId = 'Xev6bxEAABBnXxL4';
     const stockistsResponse = await getPageApi(stockistsId);
 
     return {

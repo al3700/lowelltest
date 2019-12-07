@@ -9,10 +9,10 @@ export default class CafePage extends Component {
   static async getInitialProps() {
     // we get the pageId of the post so that we can
     // query the API with it
-    const pageId = 'XUYTghAAACcAIVdE';
+    const pageId = 'Xev0AhEAANVmXvaw';
     const response = await getPageApi(pageId);
 
-    const cafeLandingId = 'XWb9nxAAAB8AWf_5';
+    const cafeLandingId = 'XevyPhEAAHJmXu7Z';
     const cafeResponse = await getPageApi(cafeLandingId);
     return {
       page: response,

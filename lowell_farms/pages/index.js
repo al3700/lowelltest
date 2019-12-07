@@ -6,7 +6,7 @@ import Home from '../components/Home';
 export default class HomePage extends Component {
   static async getInitialProps() {
     // Query the Prismic API with the ID of the page
-    const pageId = 'XJQ3WREAAEWRl5ja';
+    const pageId = 'XesrUhEAAK9eW3_c';
     const response = await getPageApi(pageId);
 
     const productsResponse = await getPageByType('product');

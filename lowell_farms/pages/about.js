@@ -6,7 +6,7 @@ import About from '../components/About';
 export default class AboutPage extends Component {
   static async getInitialProps() {
     // Query the Prismic API with the ID of the page
-    const pageId = 'XJbm1BEAAPXUozSl';
+    const pageId = 'XestyhEAAJpcW4rU';
     const response = await getPageApi(pageId);
 
     return {
