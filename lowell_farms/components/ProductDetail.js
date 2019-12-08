@@ -42,19 +42,20 @@ class ProductDetail extends Component {
             for (let i = 0; i < products.length; i++) {
               // console.log(products[i].data.shopify_product != null);
               const productId =
-                products[i].data.shopify_product != '' &&
-                products[i].data.shopify_product != null
-                  ? products[i].data.shopify_product.id
+                products[i].uid != '' &&
+                products[i].uid != null
+                  ? products[i].uid
                   : '';
               prismicProductData[productId] = products[i];
             }
             for (let i = 0; i < gearProducts.length; i++) {
               const productId =
-                gearProducts[i].data.shopify_product != ''
-                  ? gearProducts[i].data.shopify_product.id
+                gearProducts[i].uid != ''
+                  ? gearProducts[i].uid
                   : '';
               prismicProductData[productId] = gearProducts[i];
             }
+
 
             const selectedProduct = data.shop.productByHandle;
 
@@ -68,12 +69,15 @@ class ProductDetail extends Component {
 
             let productDetailTemplate;
 
-            // console.log(productInfo);
+
 
             if (
               selectedProductCollection == 'cannabis' ||
               selectedProductCollection == 'cbd'
             ) {
+
+                  console.log(selectedProduct);
+
               productDetailTemplate = (
                 <HempProductDetail
                   shopifyProduct={selectedProduct}
@@ -119,6 +123,7 @@ const SINGLE_PRODUCT_QUERY = gql`
         handle
         description
         availableForSale
+        productType
         collections(first: 1) {
           edges {
             node {

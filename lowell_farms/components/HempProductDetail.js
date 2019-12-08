@@ -33,6 +33,7 @@ class ProductPage extends Component {
     } = this.props;
 
     let metaTitle;
+
     if (productInfo.meta_title != null && productInfo.meta_title != '') {
       metaTitle = productInfo.meta_title;
     } else if (productInfo.title != null && productInfo.title != '') {
@@ -54,9 +55,13 @@ class ProductPage extends Component {
       metaDescription = RichText.asText(productInfo.title);
     }
 
-    const aboutImageCategory = `${productInfo.shopify_product.product_type} ${
+
+
+    const aboutImageCategory = `${shopifyProduct.productType} ${
       productInfo.product_category
     }`;
+
+
 
     let aboutImage;
 
@@ -82,6 +87,8 @@ class ProductPage extends Component {
       default:
         aboutImage = pageData.learn_more_image;
     }
+
+
     const showPackInfo =
       productInfo.product_category != 'Flower' &&
       productInfo.product_category != 'Individual Smoke' &&
@@ -178,6 +185,8 @@ class ProductPage extends Component {
     }
 
     // MIXTURE
+
+    console.log(productInfo.mixture[0].thc_percentage1);
     if (
       productInfo &&
       productInfo.mixture != '' &&
@@ -196,9 +205,11 @@ class ProductPage extends Component {
                 className="split-text"
               >
                 <span className="small-nitti-caps">
-                  {RichText.asText(item.mixture_title)}
+                  {item.mixture_title != '' && RichText.asText(item.mixture_title)}
                 </span>
                 {item.thc_percentage1 !== null &&
+                  item.thc_percentage1.length > 0 &&
+
                   item.thc_percentage1[0].text != '' && (
                     <span className="border-left thin-nitti-caps">
                       {RichText.asText(item.thc_percentage1)}
@@ -358,8 +369,8 @@ class ProductPage extends Component {
                 deliveryZipCodes={deliveryZipCodes}
                 pageData={pageData}
                 handle={
-                  productInfo.shopify_product &&
-                  productInfo.shopify_product.product_type
+                  shopifyProduct &&
+                  shopifyProduct.productType
                 }
                 stockists={stockists}
                 shopifyProduct={shopifyProduct}

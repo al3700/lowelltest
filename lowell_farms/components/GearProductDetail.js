@@ -88,7 +88,7 @@ class ProductPage extends Component {
 
     let aboutImage;
 
-    switch (productInfo.shopify_product.product_type) {
+    switch (shopifyProduct.productType) {
       case 'Accessories':
         aboutImage = pageData.accessories_footer_image;
         break;
