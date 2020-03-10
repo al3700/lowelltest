@@ -186,7 +186,7 @@ class ProductPage extends Component {
 
     // MIXTURE
 
-    console.log(productInfo.mixture[0].thc_percentage1);
+    
     if (
       productInfo &&
       productInfo.mixture != '' &&

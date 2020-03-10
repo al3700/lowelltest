@@ -12,12 +12,12 @@ import {
 
 function createClient() {
   return new ApolloClient({
-    uri: 'https://lowellherb.myshopify.com/api/graphql',
+    uri: 'https://lowellherb.myshopify.com/api/2020-01/graphql.json',
     request: operation => {
       operation.setContext({
         headers: {
           'X-Shopify-Storefront-Access-Token':
-            '2d5fb5b288da9ef8f285ffc9bd99be26',
+            '8e1caf6f56bc27764cf1b9d81ff422af',
         },
       });
     },

@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import { ApolloProvider } from 'react-apollo';
 import shuffle from 'shuffle-array';
 import Page from '../components/Page';
@@ -58,18 +58,16 @@ class LowellApp extends App {
     pageProps.router = router;
 
     return (
-      <Container>
-        <ApolloProvider client={apollo}>
-          <Page
-            sitewideData={sitewideResponse}
-            router={router}
-            zipCodes={pageProps.zipCodes}
-            products={productsResponse}
-          >
-            <Component {...pageProps} />
-          </Page>
-        </ApolloProvider>
-      </Container>
+      <ApolloProvider client={apollo}>
+        <Page
+          sitewideData={sitewideResponse}
+          router={router}
+          zipCodes={pageProps.zipCodes}
+          products={productsResponse}
+        >
+          <Component {...pageProps} />
+        </Page>
+      </ApolloProvider>
     );
   }
 }
