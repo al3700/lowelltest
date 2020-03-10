@@ -24,7 +24,7 @@ class ProductPage extends Component {
     this.handleOptionChange = this.handleOptionChange.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.shopifyProduct.options.forEach(selector => {
       this.setState({
         selectedOptions: { [selector.name]: selector.values[0] },
