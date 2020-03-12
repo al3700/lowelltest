@@ -340,46 +340,50 @@ class Home extends Component {
         </section>
 
         {/* CAFE SECTION */}
-        <section className="cafe">
-          <div className="container">
-            <div className="cols-2 cannabis-row">
-              <div className="vertical-aligner">
-                <h2 className="home-section-title ">
-                  {pageData.cafe_heading != '' &&
-                    RichText.asText(pageData.cafe_heading)}
-                </h2>
-                <h3 className="small-caps gold-text">
-                  {pageData.cafe_subheader != '' &&
-                    RichText.asText(pageData.cafe_subheader)}
-                </h3>
-                <div className="rich-text section-desc">
-                  {pageData.cafe_intro_text != '' &&
-                    RichText.render(pageData.cafe_intro_text, linkResolver)}
+        {pageData.show_cafe_section != false && (
+
+          <section className="cafe">
+            <div className="container">
+              <div className="cols-2 cannabis-row">
+                <div className="vertical-aligner">
+                  <h2 className="home-section-title ">
+                    {pageData.cafe_heading != '' &&
+                      RichText.asText(pageData.cafe_heading)}
+                  </h2>
+                  <h3 className="small-caps gold-text">
+                    {pageData.cafe_subheader != '' &&
+                      RichText.asText(pageData.cafe_subheader)}
+                  </h3>
+                  <div className="rich-text section-desc">
+                    {pageData.cafe_intro_text != '' &&
+                      RichText.render(pageData.cafe_intro_text, linkResolver)}
+                  </div>
+                </div>
+                <div>
+                <LazyLoadImage src={pageData.cafe_image != '' && pageData.cafe_image.url}
+                alt={
+                  pageData.cafe_heading != '' &&
+                  RichText.asText(pageData.cafe_heading)
+                }
+                className=""
+                effect="opacity"/>
                 </div>
               </div>
-              <div>
-              <LazyLoadImage src={pageData.cafe_image != '' && pageData.cafe_image.url}
-              alt={
-                pageData.cafe_heading != '' &&
-                RichText.asText(pageData.cafe_heading)
-              }
-              className=""
-              effect="opacity"/>
-              </div>
             </div>
-          </div>
-          <div className="container">
-            <a href="/cafe">
-              <ButtonDark className="wider">
-                {pageData.cafe_button_text != '' &&
-                  RichText.asText(
-                    pageData.cafe_button_text,
-                    linkResolver
-                  )}
-              </ButtonDark>
-            </a>
-          </div>
-        </section>
+            <div className="container">
+              <a href="/cafe">
+                <ButtonDark className="wider">
+                  {pageData.cafe_button_text != '' &&
+                    RichText.asText(
+                      pageData.cafe_button_text,
+                      linkResolver
+                    )}
+                </ButtonDark>
+              </a>
+            </div>
+          </section>
+        )}
+
         {/* QUOTE SECTION */}
 
         <div className="container">
