@@ -15,12 +15,9 @@ export default class Gear extends Component {
   render() {
     const { entries, query, pathname } = this.props;
 
-    console.log(pathname);
-
     entries.sort(function( a, b ){
       return new Date(b.data.article_date) - new Date(a.data.article_date);
     });
-
 
     const blogEntry = entries.filter(entry => entry.uid == query.uid);
 

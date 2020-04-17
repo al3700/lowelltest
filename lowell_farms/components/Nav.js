@@ -127,7 +127,9 @@ class Nav extends Component {
                   sitewideData.data.gear_link_text[0].text}
               </a>
             </Link>
-
+            <Link href="https://lowellfarms.direct/">
+              <a>Direct</a>
+            </Link>
           </div>
 
           {/* LOGO ========== */}

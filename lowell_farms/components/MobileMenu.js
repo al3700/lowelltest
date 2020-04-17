@@ -107,6 +107,9 @@ class MobileMenu extends Component {
                           sitewideData.data.gear_link_text[0].text}
                       </a>
                     </Link>
+                    <Link href="https://lowellfarms.direct/">
+                      <a>Direct</a>
+                    </Link>
                     <Link href="/stockists">
                       <a onClick={toggleMobileMenu}>
                         {sitewideData.data.stockists_link_text != '' &&
