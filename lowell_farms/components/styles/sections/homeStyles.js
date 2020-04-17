@@ -119,6 +119,14 @@ export const HomeWrapper = styled.main`
     max-width: 420px;
   }
 
+  .announcement-btn {
+    max-width: 42rem;
+    button {
+      max-width: 26rem;
+      margin: 2rem auto;
+    }
+  }
+
   .cafe {
     background-color: #F1F1F1;
     padding: 80px 0 100px;

@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import Head from 'next/head';
 import { RichText } from 'prismic-reactjs';
 import { linkResolver } from '../lib/helpers';
+import Link from 'next/link';
 import ButtonGold from './styles/ButtonGold';
 import HeaderStyles from './styles/HeaderStyles';
 import ButtonDark from './styles/ButtonDark';
@@ -74,17 +75,26 @@ class Home extends Component {
             <div className="cols-2 mobile-flex-reverse">
               <div className="vertical-aligner">
                 <div>
-                  <LazyLoadImage
-                  src={
-                    pageData.featured_product_image != '' &&
-                    pageData.featured_product_image.url
+                  {
+                    pageData.featured_product_link != '' && (
+                      <Link href={pageData.featured_product_link.url}>
+                        <a>
+                        <LazyLoadImage
+                        src={
+                          pageData.featured_product_image != '' &&
+                          pageData.featured_product_image.url
+                        }
+                        alt={
+                          pageData.featured_product_heading != '' &&
+                          RichText.asText(pageData.featured_product_heading)
+                        }
+                        className=""
+                        effect="opacity"/>
+                        </a>
+                      </Link>
+                    )
                   }
-                  alt={
-                    pageData.featured_product_heading != '' &&
-                    RichText.asText(pageData.featured_product_heading)
-                  }
-                  className=""
-                  effect="opacity"/>
+
                 </div>
               </div>
               <div className="vertical-aligner">
@@ -100,6 +110,18 @@ class Home extends Component {
                   {pageData.featured_product_intro_text != '' &&
                     RichText.render(pageData.featured_product_intro_text, linkResolver)}
                 </div>
+                {
+                  pageData.featured_product_link != '' && (
+                    <Link href={pageData.featured_product_link.url}>
+                      <a className="announcement-btn">
+                        <ButtonDark>
+                        {pageData.featured_product_button_text != '' &&
+                        RichText.asText(pageData.featured_product_button_text)}
+                        </ButtonDark>
+                      </a>
+                    </Link>
+                  )
+                }
               </div>
             </div>
           </div>
