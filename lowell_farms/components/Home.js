@@ -56,6 +56,101 @@ class Home extends Component {
       );
     }
 
+    const displayNewProduct = pageData.show_featured_product ? (
+      <HeaderStyles
+        className="home-header"
+        style={{
+          background: `${pageData.featured_product_background_color}`,
+          backgroundSize: 'cover',
+        }}>
+          {console.log(pageData)}
+          <div className="container">
+            <div className="container-lg">
+              <h1 style={{color:"rgb(44, 44, 44)"}}>
+                {pageData.featured_product_announcement != '' &&
+                  RichText.asText(pageData.featured_product_announcement, linkResolver)}
+              </h1>
+            </div>
+            <div className="cols-2 mobile-flex-reverse">
+              <div className="vertical-aligner">
+                <div>
+                  <LazyLoadImage
+                  src={
+                    pageData.featured_product_image != '' &&
+                    pageData.featured_product_image.url
+                  }
+                  alt={
+                    pageData.featured_product_heading != '' &&
+                    RichText.asText(pageData.featured_product_heading)
+                  }
+                  className=""
+                  effect="opacity"/>
+                </div>
+              </div>
+              <div className="vertical-aligner">
+                <div className="home-section-title">
+                  {pageData.featured_product_heading != '' &&
+                    RichText.render(pageData.featured_product_heading, linkResolver)}
+                </div>
+                <h3 className="small-caps gold-text announcement-gold-text">
+                  {pageData.featured_product_subheader != '' &&
+                    RichText.asText(pageData.featured_product_subheader)}
+                </h3>
+                <div className="rich-text section-desc announcement-gold-text">
+                  {pageData.featured_product_intro_text != '' &&
+                    RichText.render(pageData.featured_product_intro_text, linkResolver)}
+                </div>
+              </div>
+            </div>
+          </div>
+      </HeaderStyles>
+    ) : (
+      <HeaderStyles
+        className="home-header"
+        style={{
+          background: `#ecebe9 url(${heroBgImageUrl})`,
+          backgroundSize: 'cover',
+        }}
+      >
+        <div
+          className="overlay"
+          style={{
+            backgroundColor: `${pageData.color_overlay}`,
+            opacity: `${pageData.opacity}`,
+          }}
+        />
+        <div className="container-lg">
+          <h1>&ldquo;{quotesData[0].quote[0].text}&rdquo;</h1>
+          <div className="publication">
+            &ndash; {quotesData[0].publication[0].text}
+          </div>
+        </div>
+
+        <div
+          className={`${videoClassName} video-wrapper`}
+          onClick={this.closeVideoModal}
+        >
+          <img
+            src="../static/close_light.svg"
+            alt="Close"
+            className="close-video"
+          />
+          <div className="container-sm">
+            <div
+              className="inner"
+              dangerouslySetInnerHTML={{
+                __html: pageData.youtube_video.html,
+              }}
+            />
+          </div>
+        </div>
+        <ButtonGold className="watch-video" onClick={this.openVideoModal}>
+          {pageData.cta_icon.url && (
+            <img src={pageData.cta_icon.url} alt="Play Video" width="100" />
+          )}
+        </ButtonGold>
+      </HeaderStyles>
+    )
     return (
       <HomeWrapper>
         <Head>
@@ -77,51 +172,8 @@ class Home extends Component {
           )}
           <link href="https://www.lowellfarms.com/" rel="canonical" />
         </Head>
-        <HeaderStyles
-          className="home-header"
-          style={{
-            background: `#ecebe9 url(${heroBgImageUrl})`,
-            backgroundSize: 'cover',
-          }}
-        >
-          <div
-            className="overlay"
-            style={{
-              backgroundColor: `${pageData.color_overlay}`,
-              opacity: `${pageData.opacity}`,
-            }}
-          />
-          <div className="container-lg">
-            <h1>&ldquo;{quotesData[0].quote[0].text}&rdquo;</h1>
-            <div className="publication">
-              &ndash; {quotesData[0].publication[0].text}
-            </div>
-          </div>
 
-          <div
-            className={`${videoClassName} video-wrapper`}
-            onClick={this.closeVideoModal}
-          >
-            <img
-              src="../static/close_light.svg"
-              alt="Close"
-              className="close-video"
-            />
-            <div className="container-sm">
-              <div
-                className="inner"
-                dangerouslySetInnerHTML={{
-                  __html: pageData.youtube_video.html,
-                }}
-              />
-            </div>
-          </div>
-          <ButtonGold className="watch-video" onClick={this.openVideoModal}>
-            {pageData.cta_icon.url && (
-              <img src={pageData.cta_icon.url} alt="Play Video" width="100" />
-            )}
-          </ButtonGold>
-        </HeaderStyles>
+        {displayNewProduct}
 
         <section className="cannabis">
           <div className="container">
