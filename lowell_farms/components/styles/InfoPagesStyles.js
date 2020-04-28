@@ -34,7 +34,7 @@ const InfoPagesStyles = styled.section`
       display: block;
       font-size: 2rem;
       color: #6b6653;
-      margin-bottom: -1rem;
+      margin-bottom: 1.2rem;
       margin-top: 4rem;
       @media screen and (max-width: 768px) {
         margin-top: 3rem;

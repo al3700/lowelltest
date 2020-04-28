@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { RichText } from 'prismic-reactjs';
+import { linkResolver } from '../lib/helpers';
 import NewsletterCallout from './styles/NewsletterCallout';
 import Input from './styles/Input';
 import ButtonDark from './styles/ButtonDark';
@@ -88,6 +89,10 @@ export default class Newsletter extends Component {
                   readOnly
                 />
               </div>
+              <div className="disclaimer">
+                {newsletterData.disclaimer != '' &&
+                  RichText.render(newsletterData.disclaimer, linkResolver)}
+              </div>
               <ButtonDark
                 type="submit"
                 name="subscribe"
@@ -96,6 +101,8 @@ export default class Newsletter extends Component {
                 {newsletterData.newsletter_button_text != '' &&
                   RichText.asText(newsletterData.newsletter_button_text)}
               </ButtonDark>
+
+
             </div>
           </form>
         </div>

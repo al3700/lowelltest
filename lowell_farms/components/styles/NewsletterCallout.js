@@ -31,6 +31,14 @@ const NewsletterCallout = styled.div`
       margin-right: auto;
     }
   }
+  .disclaimer {
+    font-size: 1.1rem;
+    margin-bottom: 2.4rem;
+    margin-top: 2rem;
+    a {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export default NewsletterCallout;

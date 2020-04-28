@@ -72,7 +72,7 @@ class Home extends Component {
                   RichText.asText(pageData.featured_product_announcement, linkResolver)}
               </h1>
             </div>
-            <div className="cols-2 mobile-flex-reverse">
+            <div className="cols-2">
               <div className="vertical-aligner">
                 <div>
                   {

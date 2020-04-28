@@ -8,6 +8,7 @@ import Meta from './Meta';
 import Cart from './Cart';
 import ZipCodeCheck from './ZipCodeCheck';
 import AgeCheck from './AgeCheck';
+import CookiesBanner from './CookiesBanner';
 import { CHECKOUT_ID_QUERY } from './AddToCart';
 import { initGA, logPageView } from '../lib/analytics';
 import {
@@ -20,6 +21,7 @@ import {
 class Page extends Component {
   state = {
     showAgeCheck: false,
+    showCookiesBanner: false,
     localStorageCheckout: {},
   };
 
@@ -39,6 +41,13 @@ class Page extends Component {
       this.setState({ showAgeCheck: false });
     } else {
       this.setState({ showAgeCheck: true });
+    }
+
+    const { allowCookies } = localStorage;
+    if (allowCookies == 'true') {
+      this.setState({ showCookiesBanner: false });
+    } else {
+      this.setState({ showCookiesBanner: true });
     }
 
     const localZipCode = localStorage.getItem('zipCode');
@@ -98,6 +107,12 @@ class Page extends Component {
     this.setState({ showAgeCheck: false });
   };
 
+  allowCookies = () => {
+    // Show 6 more delivery services each time the button is clicked
+    localStorage.setItem('allowCookies', 'true');
+    this.setState({ showCookiesBanner: false });
+  };
+
   render() {
     const { sitewideData, router, client, products } = this.props;
 
@@ -117,6 +132,12 @@ class Page extends Component {
           <AgeCheck
             action={this.allowSiteEntry}
             showAgeCheck={this.state.showAgeCheck}
+          />
+          <CookiesBanner
+            className={this.state.showCookiesBanner ? '' : 'hide'}
+            action={this.allowCookies}
+            showCookiesBanner={this.state.showCookiesBanner}
+            sitewideData={sitewideData.data}
           />
           <ZipCodeCheck client={client} />
           <Inner>{this.props.children}</Inner>

@@ -16,7 +16,7 @@ class AgeCheck extends Component {
                 alt="Lowell Icon"
                 className="icon"
               />
-              <h1>Are you 21+?</h1>
+              <h1>I am at least 21 years old and agree to the <a href="/terms">Terms of Use</a> and <a href="/privacy">Privacy Policy</a></h1>
             </div>
             <div className="padded bottom">
               <ButtonDark type="button" onClick={action}>

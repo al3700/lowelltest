@@ -152,14 +152,20 @@ class Footer extends Component {
                           sitewideData.data.about_link_text[0].text}
                     </a>
                   </Link>
-                  {sitewideData.data.show_terms_page && (
-                    <Link href="/terms">
-                    <a>
-                    {sitewideData.data.terms_link_text != '' &&
-                    sitewideData.data.terms_link_text[0].text}
-                    </a>
-                    </Link>
-                  )}
+
+                  <Link href="/terms">
+                  <a>
+                  {sitewideData.data.terms_link_text != '' &&
+                  sitewideData.data.terms_link_text[0].text}
+                  </a>
+                  </Link>
+                  <Link href="/privacy-policy">
+                  <a>
+                  {sitewideData.data.privacy_link_text != '' &&
+                  sitewideData.data.privacy_link_text[0].text}
+                  </a>
+                  </Link>
+
                 </div>
               </div>
               <div className="col-right">

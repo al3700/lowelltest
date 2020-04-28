@@ -15,6 +15,25 @@ export const HomeWrapper = styled.main`
         margin-bottom: 25px;
       }
     }
+    @media only screen and (max-width: 768px) {
+      img {
+        margin-bottom: 0;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p, h3, .home-section-title, .announcement-gold-text, .announcement-btn {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 4rem);
+      }
+    }
+    .cols-2 {
+      @media only screen and (min-width: 1000px) {
+        grid-column-gap: 7rem;
+      }
+
+    }
     .publication {
       text-align: center;
       margin-top: 24px;

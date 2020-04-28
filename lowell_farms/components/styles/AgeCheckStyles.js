@@ -53,15 +53,19 @@ const AgeCheckStyles = styled.div`
     }
   }
   h1 {
-    font-family: 'Gotham Bold', sans-serif;
+    font-family: 'Lora Regular';
     font-size: 2.6rem;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
     color: #333639;
     text-align: center;
     margin-bottom: 0;
+    font-weight: 400;
+
     @media screen and (max-width: 768px) {
       font-size: 1.8rem;
+    }
+    a {
+      color: #A69463;
     }
   }
   .icon {
