@@ -31,6 +31,7 @@ export default CookiesBanner;
 
 const CookiesWrapper = styled.div`
   position: fixed;
+  z-index: 400;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -39,6 +40,9 @@ const CookiesWrapper = styled.div`
   background: white;
   font-size: 1.3rem;
   line-height: 1.4;
+  -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
   a {
     text-decoration: underline;
   }

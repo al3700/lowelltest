@@ -8,6 +8,11 @@ function linkResolver(doc) {
     return `/blog/${doc.uid}`;
   }
 
+  if (doc.type === 'info_page') {
+    return `/${doc.uid}`;
+  }
+
+
   // Default to homepage
   return '/';
 }

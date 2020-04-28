@@ -17,7 +17,7 @@ export default class Newsletter extends Component {
 
   render() {
     const { newsletterData, page } = this.props;
-
+    console.log(newsletterData);
     let bgColor;
 
     switch (page) {
