@@ -159,7 +159,7 @@ class Footer extends Component {
                   sitewideData.data.terms_link_text[0].text}
                   </a>
                   </Link>
-                  <Link href="/privacy-policy">
+                  <Link href="/privacy">
                   <a>
                   {sitewideData.data.privacy_link_text != '' &&
                   sitewideData.data.privacy_link_text[0].text}
