@@ -108,12 +108,13 @@ class Footer extends Component {
             <div className="cols-2">
               <div className="cols-2 col-left">
                 <div>
-                  <Link href="/cafe">
+                  {sitewideData.data.cafe_link_text != '' && (
+                    <Link href="/cafe">
                     <a>
-                      {sitewideData.data.cafe_link_text != '' &&
-                          sitewideData.data.cafe_link_text[0].text}
+                    {sitewideData.data.cafe_link_text[0].text}
                     </a>
-                  </Link>
+                    </Link>
+                  )}
                   <Link href="/cannabis">
                     <a>
                       {sitewideData.data.cannabis_link_text != '' &&

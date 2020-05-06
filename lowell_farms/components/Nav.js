@@ -103,12 +103,13 @@ class Nav extends Component {
           {/* LEFT COLUMN ========== */}
           <div className="left-col">
 
-          <Link href="/cafe">
+          {sitewideData.data.cafe_link_text != null && sitewideData.data.cafe_link_text[0].text != '' && (
+            <Link href="/cafe">
             <a className={router.route == '/cafe' ? 'current-page' : ''}>
-              {sitewideData.data.cafe_link_text != '' &&
-                sitewideData.data.cafe_link_text[0].text}
+            {sitewideData.data.cafe_link_text[0].text}
             </a>
-          </Link>
+            </Link>
+          )}
             <Link href="/cannabis">
               <a className={router.route.includes('/cannabis') ? 'current-page' : ''}>
                 {sitewideData.data.cannabis_link_text != '' &&

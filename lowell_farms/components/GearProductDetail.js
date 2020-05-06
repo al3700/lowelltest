@@ -82,7 +82,10 @@ class ProductPage extends Component {
       productInfo.full_product_description != ''
     ) {
       metaDescription = RichText.asText(productInfo.full_product_description);
-    } else {
+    } else if (
+      productInfo.title != null &&
+      productInfo.title != ''
+    ) {
       metaDescription = RichText.asText(productInfo.title);
     }
 
@@ -148,7 +151,7 @@ class ProductPage extends Component {
                   {shopifyProduct.title}
                 </h1>
                 <div className="description">
-                  {productInfo &&
+                  {productInfo != undefined && productInfo.full_product_description != undefined && productInfo.full_product_description != '' &&
                     RichText.asText(productInfo.full_product_description)}
                 </div>
                 {variant_selectors}
