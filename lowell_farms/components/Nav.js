@@ -111,7 +111,7 @@ class Nav extends Component {
             </Link>
           )}
             <Link href="/cannabis2">
-              <a className={router.route.includes('/cannabis') ? 'current-page' : ''}>
+              <a className={router.route.includes('/cannabis2') ? 'current-page' : ''}>
                 {sitewideData.data.cannabis_link_text != '' &&
                   sitewideData.data.cannabis_link_text[0].text}
               </a>
