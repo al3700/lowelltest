@@ -97,7 +97,7 @@ class Nav extends Component {
         </MobileNav>
 
         {/* ====================================== */}
-        {/* DESKTOP NAV */}
+        {/* DESKTOP NAV fixed */}
         {/* ====================================== */}
         <NavInner>
           {/* LEFT COLUMN ========== */}
@@ -173,4 +173,6 @@ class Nav extends Component {
   }
 }
 
+
 export default Nav;
+
